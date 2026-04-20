@@ -344,20 +344,23 @@ const SalesPdfDocument = ({ invoiceData, invoiceNumber, gstBreakdown, isSameStat
       <Page size="A5" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <View style={styles.companyInfo}>
-            <Text style={styles.companyName}>
-              SHREE SHASHWATRAJ AGRO PVT LTD
-            </Text>
-            <Text style={styles.companyAddress}>
-              Growth Center, Jasoiya, Aurangabad, Bihar - 824101
-            </Text>
-            <Text style={styles.companyAddress}>
-              GSTIN/UIN: 10AAOCS1541B1ZZ
-            </Text>
-            <Text style={styles.companyAddress}>
-              State Name: Bihar | Code: 10
-            </Text>
-          </View>
+     <View style={styles.companyInfo}>
+  <Text style={styles.companyName}>
+    iiiQBets
+  </Text>
+
+  <Text style={styles.companyAddress}>
+    MG Road, Bengaluru, Karnataka - 560001
+  </Text>
+
+  <Text style={styles.companyAddress}>
+    GSTIN/UIN: 29ABCDE1234F1Z5
+  </Text>
+
+  <Text style={styles.companyAddress}>
+    State Name: Karnataka | Code: 29
+  </Text>
+</View>
           <View style={styles.invoiceMeta}>
             <Text style={styles.invoiceTitle}>{getSafeData(currentData, 'document_type') || ''}</Text>
             <Text style={styles.addressText}><Text style={styles.tableCellBold}>Invoice No:</Text> {displayInvoiceNumber}</Text>
@@ -568,13 +571,13 @@ const SalesPdfDocument = ({ invoiceData, invoiceNumber, gstBreakdown, isSameStat
         
         {/* Footer */}
         <View style={styles.footer}>
-          <View style={styles.bankDetails}>
-            <Text style={styles.bankTitle}>Bank Details:</Text>
-            <Text style={styles.bankText}>SHREE SHASHWATRAJ AGRO PVT LTD</Text>
-            <Text style={styles.bankText}>SBI - SME AURANGABAD</Text>
-            <Text style={styles.bankText}>A/C: 44773710377</Text>
-            <Text style={styles.bankText}>IFSC: SBIN0063699</Text>
-          </View>
+      <View style={styles.bankDetails}>
+  <Text style={styles.bankTitle}>Bank Details:</Text>
+  <Text style={styles.bankText}>iiiQBets</Text>
+  <Text style={styles.bankText}>SBI - MG ROAD, BENGALURU</Text>
+  <Text style={styles.bankText}>A/C: 12345678901</Text>
+  <Text style={styles.bankText}>IFSC: SBIN0000456</Text>
+</View>
           
           <View style={styles.signature}>
             <View style={styles.signatureBox}>

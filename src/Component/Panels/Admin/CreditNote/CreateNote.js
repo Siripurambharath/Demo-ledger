@@ -79,24 +79,28 @@ const CreateCreditNote = () => {
             <div className="row g-0 align-items-start">
 
               {/* LEFT */}
-         <div className="col-lg-8 col-md-7 border-end p-3">
+<div className="col-lg-8 col-md-7 border-end p-3">
   <strong className="d-block mb-2">Navkar Exports</strong>
+
   <div className="company-details" style={{ fontSize: '13px' }}>
     <div className="mb-1">
-      <strong>Name:</strong> SHREE SHASHWAT RAJ AGRO PVT.LTD.
+      <strong>Name:</strong> iiiQBets
     </div>
+
     <div className="mb-1">
-      <strong>Address:</strong> NO.PATNA ROAD, 0, SHREE SHASHWAT RAJ AGRO PVT LTD,
-      BHAKHARUAN MORE, DAUDNAGAR, Aurangabad, Bihar 824113
+      <strong>Address:</strong> MG Road, Bengaluru, Karnataka, 560001
     </div>
+
     <div className="mb-1">
-      <strong>Email:</strong> spmathur56@gmail.com
+      <strong>Email:</strong> demo@gmail.com
     </div>
+
     <div className="mb-1">
       <strong>Phone:</strong> 9801049700
     </div>
+
     <div className="mb-1">
-      <strong>GSTIN:</strong> 10AAOCS1541B1ZZ
+      <strong>GSTIN:</strong> 29ABCDE1234F1Z5
     </div>
   </div>
 </div>

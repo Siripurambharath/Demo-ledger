@@ -430,26 +430,33 @@ const InvoicceprintOrder = ({ invoiceData, invoiceNumber, gstBreakdown, isSameSt
       <Page size="A4" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <View style={styles.companyInfo}>
-            <Text style={styles.companyName}>{getSafeData(companyInfo, 'name', 'SHREE SHASHWATRAJ AGRO PVT LTD')}</Text>
-            <Text style={styles.companyAddress}>
-              {getSafeData(companyInfo, 'address', 'Growth Center, Jasoiya, Aurangabad, Bihar, 824101')}
-            </Text>
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 3 }}>
-              <Text style={[styles.companyAddress, { marginRight: 5 }]}>
-                Email: {getSafeData(companyInfo, 'email', 'spmathur56@gmail.com')} |
-              </Text>
-              <Text style={[styles.companyAddress, { marginRight: 5 }]}>
-                Phone: {getSafeData(companyInfo, 'phone', '9801049700')} |
-              </Text>
-              <Text style={[styles.companyAddress, { marginRight: 5 }]}>
-                GSTIN: {getSafeData(companyInfo, 'gstin', '10AAOCS1541B1ZZ')} |
-              </Text>
-              <Text style={styles.companyAddress}>
-                State Code: {getSafeData(companyInfo, 'stateCode', '10')}
-              </Text>
-            </View>
-          </View>
+      <View style={styles.companyInfo}>
+  <Text style={styles.companyName}>
+    {getSafeData(companyInfo, 'name', 'iiiQBets')}
+  </Text>
+
+  <Text style={styles.companyAddress}>
+    {getSafeData(companyInfo, 'address', 'MG Road, Bengaluru, Karnataka, 560001')}
+  </Text>
+
+  <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 3 }}>
+    <Text style={[styles.companyAddress, { marginRight: 5 }]}>
+      Email: {getSafeData(companyInfo, 'email', 'demo@gmail.com')} |
+    </Text>
+
+    <Text style={[styles.companyAddress, { marginRight: 5 }]}>
+      Phone: {getSafeData(companyInfo, 'phone', '9801049700')} |
+    </Text>
+
+    <Text style={[styles.companyAddress, { marginRight: 5 }]}>
+      GSTIN: {getSafeData(companyInfo, 'gstin', '29ABCDE1234F1Z5')} |
+    </Text>
+
+    <Text style={styles.companyAddress}>
+      State Code: {getSafeData(companyInfo, 'stateCode', '29')}
+    </Text>
+  </View>
+</View>
           <View style={styles.invoiceMeta}>
             <Text style={styles.invoiceTitle}>TAX INVOICE</Text>
             <Text style={styles.tableCell}><Text style={styles.tableCellBold}>Invoice No:</Text> {displayInvoiceNumber}</Text>
@@ -640,16 +647,17 @@ const InvoicceprintOrder = ({ invoiceData, invoiceNumber, gstBreakdown, isSameSt
         
         {/* Footer */}
         <View style={styles.footer}>
-          <View style={styles.bankDetails}>
-            <Text style={styles.bankTitle}>Bank Details:</Text>
-            <View style={{ backgroundColor: '#f8f9fa', padding: 6, borderRadius: 3 }}>
-              <Text style={styles.bankText}>Company Name: SHREE SHASHWATRAJ AGRO PVT LTD</Text>
-              <Text style={styles.bankText}>Bank Name: STATE BANK OF INDIA</Text>
-              <Text style={styles.bankText}>Branch: SME AURANGABAD</Text>
-              <Text style={styles.bankText}>Account Number: 44773710377</Text>
-              <Text style={styles.bankText}>IFSC Code: SBIN0063699</Text>
-            </View>
-          </View>
+         <View style={styles.bankDetails}>
+  <Text style={styles.bankTitle}>Bank Details:</Text>
+
+  <View style={{ backgroundColor: '#f8f9fa', padding: 6, borderRadius: 3 }}>
+    <Text style={styles.bankText}>Company Name: iiiQBets</Text>
+    <Text style={styles.bankText}>Bank Name: STATE BANK OF INDIA</Text>
+    <Text style={styles.bankText}>Branch: MG ROAD, BENGALURU</Text>
+    <Text style={styles.bankText}>Account Number: 12345678901</Text>
+    <Text style={styles.bankText}>IFSC Code: SBIN0000456</Text>
+  </View>
+</View>
           
           <View style={styles.signature}>
             <View style={styles.signatureBox}>

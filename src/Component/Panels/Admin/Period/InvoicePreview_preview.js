@@ -821,29 +821,29 @@ const getNetPricePerUnit = (item) => {
       Bank Details:
     </h6>
     
-    <div className="bg-light p-2 rounded" style={{ fontSize: '11px', lineHeight: '1.2' }}>
-      
-      <p className="mb-1" style={{ fontSize: '12px', }}  >
-        Account Name: SHREE SHASHWATRAJ AGRO PVT LTD
-      </p>
-      
-      <p className="mb-1" style={{ fontSize: '12px', }}>
-        Bank Name: STATE BANK OF INDIA
-      </p>
-      
-      <p className="mb-1" style={{ fontSize: '12px', }}>
-        Branch: SME AURANGABAD
-      </p>
-      
-      <p className="mb-1" style={{ fontSize: '12px', }}>
-        Account Number: 44773710377
-      </p>
-      
-      <p className="mb-0" style={{ fontSize: '12px', }}>
-        IFSC Code: SBIN0063699
-      </p>
-      
-    </div>
+<div className="bg-light p-2 rounded" style={{ fontSize: '11px', lineHeight: '1.2' }}>
+  
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Account Name: iiiQBets
+  </p>
+  
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Bank Name: STATE BANK OF INDIA
+  </p>
+  
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Branch: MG ROAD, BENGALURU
+  </p>
+  
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Account Number: 12345678901
+  </p>
+  
+  <p className="mb-0" style={{ fontSize: '12px' }}>
+    IFSC Code: SBIN0000456
+  </p>
+  
+</div>
   </div>
           </Col>
           <Col md={6} className="text-end">

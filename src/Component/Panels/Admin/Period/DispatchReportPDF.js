@@ -311,7 +311,7 @@ const DispatchReportPDF = ({ invoiceData }) => {
       <Page size="A4" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.companyName}>SHREE SHASHWAT RAJ AGRO PVT.LTD.</Text>
+          <Text style={styles.companyName}>iiiQBets</Text>
           <Text style={styles.title}>DESPATCH REPORT</Text>
           
           <View style={styles.dispatchInfo}>

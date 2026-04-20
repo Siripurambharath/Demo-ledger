@@ -1188,15 +1188,14 @@ const handleDownloadRange = async () => {
                   <div className="modal-body">
                     <div className="row mb-4">
                       <div className="col-md-6">
-                        <div className="company-info-recepits-table text-center">
-                <label className="form-label-recepits-table">SHREE SHASHWATRAJ AGRO PVT LTD</label>
-  <p>Growth Center, Jasoiya, Aurangabad</p>
-  <p>Bihar, 824101</p>
-  <p>GST : 10AAOCS1541B1ZZ</p>
-  <p>Email: spmathur56@gmail.com</p>
+ <div className="company-info-recepits-table text-center">
+  <label className="form-label-recepits-table">iiiQBets</label>
+  <p>MG Road, Bengaluru</p>
+  <p>Karnataka, 560001</p>
+  <p>GST : 29ABCDE1234F1Z5</p>
+  <p>Email: demo@gmail.com</p>
   <p>Phone: 9801049700</p>
-                        </div>
-                      </div>
+</div>                      </div>
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Voucher Number</label>

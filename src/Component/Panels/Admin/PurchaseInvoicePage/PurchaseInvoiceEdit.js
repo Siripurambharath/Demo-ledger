@@ -44,14 +44,15 @@ const [discountCharges, setDiscountCharges] = useState([]);
       invoiceNumber: "INV001",
       invoiceDate: new Date().toISOString().split('T')[0],
       validityDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-       companyInfo: {
-  name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-  address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-  email: "spmathur56@gmail.com",
+      
+    companyInfo: {
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
   phone: "9801049700",
-  gstin: "10AAOCS1541B1ZZ",
-  state: "Bihar",
-  stateCode: "10"
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
 },
       supplierInfo: {
         name: "",
@@ -262,15 +263,16 @@ const transformApiDataToFormFormat = (apiData) => {
     invoiceDate: apiData.Date ? new Date(apiData.Date).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
     validityDate: apiData.Date ? new Date(new Date(apiData.Date).getTime() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
     
+       
     companyInfo: {
-      name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-      address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-      email: "spmathur56@gmail.com",
-      phone: "9801049700",
-      gstin: "10AAOCS1541B1ZZ",
-      state: "Bihar",
-      stateCode: "10"
-    },
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
+  phone: "9801049700",
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
+},
     
     supplierInfo: {
       name: apiData.PartyName || '',
@@ -851,14 +853,15 @@ useEffect(() => {
       invoiceNumber: nextInvoiceNumber,
       invoiceDate: new Date().toISOString().split('T')[0],
       validityDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-        companyInfo: {
-  name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-  address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-  email: "spmathur56@gmail.com",
+      
+    companyInfo: {
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
   phone: "9801049700",
-  gstin: "10AAOCS1541B1ZZ",
-  state: "Bihar",
-  stateCode: "10"
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
 },
       supplierInfo: {
         name: "",

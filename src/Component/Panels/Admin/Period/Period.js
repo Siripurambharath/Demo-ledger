@@ -167,15 +167,15 @@ const handleDownloadSpecificPDF = async (orderNumber, pdfData) => {
       invoiceDate: new Date().toISOString().split('T')[0],
       validityDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       
-      companyInfo: {
-        name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-        address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-        email: "spmathur56@gmail.com",
-        phone: "9801049700",
-        gstin: "10AAOCS1541B1ZZ",
-        state: "Bihar",
-        stateCode: "10"
-      },
+        companyInfo: {
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
+  phone: "9801049700",
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
+},
       
       supplierInfo: {
         name: accountDetails?.name || order.customer_name,
@@ -974,14 +974,14 @@ const fetchOrders = async () => {
         creditChargeTotal: selectedItemsData.reduce((sum, item) => sum + (item.credit_charge || 0), 0)
       },
 
-         companyInfo: {
-  name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-  address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-  email: "spmathur56@gmail.com",
+    companyInfo: {
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
   phone: "9801049700",
-  gstin: "10AAOCS1541B1ZZ",
-  state: "Bihar",
-  stateCode: "10"
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
 },
      
 
@@ -1236,16 +1236,15 @@ const handleGenerateDispatchReport = async () => {
       totalItemsWithInvoice: allDispatchItems.filter(item => item.has_invoice).length,
       totalItemsWithoutInvoice: allDispatchItems.filter(item => !item.has_invoice).length,
       
-      companyInfo: {
-        name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-        address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-        email: "spmathur56@gmail.com",
-        phone: "9801049700",
-        gstin: "10AAOCS1541B1ZZ",
-        state: "Bihar",
-        stateCode: "10"
-      },
-      
+        companyInfo: {
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
+  phone: "9801049700",
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
+},
       transportDetails: {
         vehicleNo: "To be filled"
       },

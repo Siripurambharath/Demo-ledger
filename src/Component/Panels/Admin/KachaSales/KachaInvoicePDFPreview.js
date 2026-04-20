@@ -471,14 +471,14 @@ useEffect(() => {
       invoiceDate: apiData.Date ? new Date(apiData.Date).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
       validityDate: apiData.Date ? new Date(new Date(apiData.Date).getTime() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
       
-         companyInfo: {
-  name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-  address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-  email: "spmathur56@gmail.com",
+    companyInfo: {
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
   phone: "9801049700",
-  gstin: "10AAOCS1541B1ZZ",
-  state: "Bihar",
-  stateCode: "10"
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
 },
       
       supplierInfo: {
@@ -1473,15 +1473,14 @@ const handleOpenReceiptModal = () => {
         <Modal.Body>  
           <div className="row mb-4">
             <div className="col-md-6">
-              <div className="company-info-recepits-table text-center">
-                <label className="form-label-recepits-table">SHREE SHASHWATRAJ AGRO PVT LTD</label>
-  <p>Growth Center, Jasoiya, Aurangabad</p>
-  <p>Bihar, 824101</p>
-  <p>GST : 10AAOCS1541B1ZZ</p>
-  <p>Email: spmathur56@gmail.com</p>
+<div className="company-info-recepits-table text-center">
+  <label className="form-label-recepits-table">iiiQBets</label>
+  <p>MG Road, Bengaluru</p>
+  <p>Karnataka, 560001</p>
+  <p>GST : 29ABCDE1234F1Z5</p>
+  <p>Email: demo@gmail.com</p>
   <p>Phone: 9801049700</p>
-
-              </div>
+</div>
             </div>
             <div className="col-md-6">
               <div className="mb-3">
@@ -2056,29 +2055,29 @@ const handleOpenReceiptModal = () => {
                         Bank Details:
                       </h6>
 
-                      <div className="bg-light p-2 rounded" style={{ fontSize: '11px', lineHeight: '1.2' }}>
+                                             <div className="bg-light p-2 rounded" style={{ fontSize: '11px', lineHeight: '1.2' }}>
 
-                        <p className="mb-1" style={{ fontSize: '12px', }}  >
-                          Account Name: SHREE SHASHWATRAJ AGRO PVT LTD
-                        </p>
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Account Name: iiiQBets
+  </p>
 
-                        <p className="mb-1" style={{ fontSize: '12px', }}>
-                          Bank Name: STATE BANK OF INDIA
-                        </p>
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Bank Name: STATE BANK OF INDIA
+  </p>
 
-                        <p className="mb-1" style={{ fontSize: '12px', }}>
-                          Branch: SME AURANGABAD
-                        </p>
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Branch: MG ROAD, BENGALURU
+  </p>
 
-                        <p className="mb-1" style={{ fontSize: '12px', }}>
-                          Account Number: 44773710377
-                        </p>
+  <p className="mb-1" style={{ fontSize: '12px' }}>
+    Account Number: 12345678901
+  </p>
 
-                        <p className="mb-0" style={{ fontSize: '12px', }}>
-                          IFSC Code: SBIN0063699
-                        </p>
+  <p className="mb-0" style={{ fontSize: '12px' }}>
+    IFSC Code: SBIN0000456
+  </p>
 
-                      </div>
+</div>
                     </div>
                       {/* <h6 className="text-primary">Notes:</h6>
                       {isEditMode ? (

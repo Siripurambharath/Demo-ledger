@@ -456,15 +456,16 @@ useEffect(() => {
     invoiceDate: apiData.Date ? new Date(apiData.Date).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
     validityDate: apiData.Date ? new Date(new Date(apiData.Date).getTime() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
     
+       
     companyInfo: {
-      name: "SHREE SHASHWATRAJ AGRO PVT LTD",
-      address: "Growth Center, Jasoiya, Aurangabad, Bihar, 824101",
-      email: "spmathur56@gmail.com",
-      phone: "9801049700",
-      gstin: "10AAOCS1541B1ZZ",
-      state: "Bihar",
-      stateCode: "10"
-    },
+  name: "iiiQBets",
+  address: "MG Road, Bengaluru, Karnataka, 560001",
+  email: "demo@gmail.com",
+  phone: "9801049700",
+  gstin: "29ABCDE1234F1Z5",
+  state: "Karnataka",
+  stateCode: "29"
+},
     
     supplierInfo: {
       name: apiData.PartyName || 'Customer',
@@ -1485,14 +1486,14 @@ formDataToSend.append('TransactionType', receiptFormData.TransactionType)
         <Modal.Body>  
           <div className="row mb-4">
             <div className="col-md-6">
-              <div className="company-info-recepits-table text-center">
-                <label className="form-label-recepits-table">SHREE SHASHWATRAJ AGRO PVT LTD</label>
-  <p>Growth Center, Jasoiya, Aurangabad</p>
-  <p>Bihar, 824101</p>
-  <p>GST : 10AAOCS1541B1ZZ</p>
-  <p>Email: spmathur56@gmail.com</p>
+<div className="company-info-recepits-table text-center">
+  <label className="form-label-recepits-table">iiiQBets</label>
+  <p>MG Road, Bengaluru</p>
+  <p>Karnataka, 560001</p>
+  <p>GST : 29ABCDE1234F1Z5</p>
+  <p>Email: demo@gmail.com</p>
   <p>Phone: 9801049700</p>
-              </div>
+</div>
             </div>
             <div className="col-md-6">
               <div className="mb-3">
