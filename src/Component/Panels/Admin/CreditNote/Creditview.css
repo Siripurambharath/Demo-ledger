@@ -1,0 +1,279 @@
+/* frontend/src/components/Sales/CreditNotes/Creditview.css */
+.creditnote-view-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.creditnote-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.creditnote-view-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.creditnote-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.creditnote-paper {
+  width: 210mm;
+  min-height: 297mm;
+  background: white;
+  padding: 20mm;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  font-family: 'Courier New', monospace;
+}
+
+.creditnote-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.creditnote-main-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #d9534f;
+  text-transform: uppercase;
+}
+
+.creditnote-customer-title {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.creditnote-divider {
+  border: none;
+  border-top: 2px dashed #333;
+  margin: 15px 0;
+}
+
+.creditnote-company-info {
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.company-details p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.creditnote-amount-info {
+  margin: 20px 0;
+}
+
+.amount-section {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.creditnote-details {
+  margin: 20px 0;
+}
+
+.creditnote-meta p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.creditnote-product-section {
+  margin: 25px 0;
+}
+
+.creditnote-product-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.creditnote-product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.creditnote-product-table th,
+.creditnote-product-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.creditnote-product-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.creditnote-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.authorized-signatory {
+  margin-bottom: 30px;
+}
+
+.authorized-signatory p {
+  margin: 5px 0;
+}
+
+.signature-line {
+  margin-top: 50px !important;
+  border-top: 1px solid #333;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+.computer-generated {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+.creditnote-additional-info {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #ccc;
+  font-size: 14px;
+}
+
+.creditnote-notes {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #d9534f;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  min-width: 150px;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: #f8d7da;
+}
+
+/* Modal Backdrop Fix */
+.modal {
+  backdrop-filter: blur(2px);
+}
+
+/* Print Styles */
+@media print {
+  .creditnote-view-header {
+    display: none !important;
+  }
+  
+  .creditnote-view-container {
+    padding: 0;
+    background: white;
+  }
+  
+  .creditnote-paper {
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .creditnote-paper {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .creditnote-view-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .creditnote-view-actions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .creditnote-view-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    width: 100%;
+  }
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}

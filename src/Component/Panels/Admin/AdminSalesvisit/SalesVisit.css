@@ -1,0 +1,861 @@
+/* SalesVisit.css - Updated with ASV prefix */
+
+/* Main Layout */
+.asv-sales-visits-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%; 
+  background: #f8fafc;
+}
+
+.asv-sales-visits-content-area {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.asv-sales-visits-content-area.asv-collapsed {
+  margin-left: 60px;
+}
+
+.asv-sales-visits-content-section {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.asv-sales-visits-section-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.asv-sales-visits-main-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+/* Search Container */
+.asv-sales-visit-search-container {
+  margin-bottom: 24px;
+}
+
+.asv-sales-visit-search-box {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.asv-sales-visits-search-input {
+  width: 100%;
+  padding: 12px 45px 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+  color: #4a5568;
+}
+
+.asv-sales-visits-search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.asv-sales-visits-search-input::placeholder {
+  color: #a0aec0;
+}
+
+.asv-sales-visits-search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+  pointer-events: none;
+}
+
+/* Card Styles (View/Edit Modes) */
+.asv-sales-visit-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.asv-sales-visit-card h3 {
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: #2d3748;
+  font-weight: 600;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Form Styles */
+.asv-form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.asv-form-group {
+  margin-bottom: 20px;
+}
+
+.asv-form-group.asv-full-width {
+  grid-column: 1 / -1;
+}
+
+.asv-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.asv-form-group input,
+.asv-form-group textarea,
+.asv-form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: white;
+  color: #2d3748;
+  transition: all 0.2s ease;
+}
+
+.asv-form-group input:focus,
+.asv-form-group textarea:focus,
+.asv-form-group select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.asv-form-group input[readOnly] {
+  background-color: #f7fafc;
+  color: #718096;
+  cursor: not-allowed;
+}
+
+.asv-form-group textarea {
+  height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Form Actions */
+.asv-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  justify-content: flex-end;
+}
+
+.asv-back-button,
+.asv-save-button,
+.asv-cancel-button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.asv-back-button,
+.asv-cancel-button {
+  background-color: #718096;
+  color: white;
+}
+
+.asv-save-button {
+  background-color: #48bb78;
+  color: white;
+}
+
+.asv-back-button:hover,
+.asv-cancel-button:hover {
+  background-color: #4a5568;
+  transform: translateY(-1px);
+}
+
+.asv-save-button:hover {
+  background-color: #38a169;
+  transform: translateY(-1px);
+}
+
+/* Table Container */
+.asv-sales-visits-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-top: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Table Header */
+.asv-sales-visits-table-container .asv-rt-table__header {
+  padding: 16px 12px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #2d3748;
+  background: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Table Cells */
+.asv-sales-visits-table-container .asv-rt-table__cell {
+  padding: 16px 12px;
+  border-bottom: 1px solid #edf2f7;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #4a5568;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Column-specific widths */
+.asv-sales-visits-table-container .asv-rt-table__cell--id {
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--retailer {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--staff {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--visit-type {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--outcome {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--amount {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--transaction {
+  width: 160px;
+  min-width: 160px;
+  max-width: 160px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--location {
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--image {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--date {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.asv-sales-visits-table-container .asv-rt-table__cell--actions {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+/* Location Cell */
+.asv-location-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.asv-location-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4a5568;
+}
+
+.asv-rt-table__action-btn--location {
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  color: #4299e1;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.asv-rt-table__action-btn--location:hover {
+  background: #ebf8ff;
+  border-color: #4299e1;
+  transform: translateY(-1px);
+}
+
+/* Image Thumbnail */
+.asv-image-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.asv-image-thumbnail {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+.asv-image-thumbnail:hover {
+  border-color: #4299e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(66, 153, 225, 0.2);
+}
+
+.asv-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.asv-image-thumbnail:hover .asv-thumbnail-img {
+  transform: scale(1.1);
+}
+
+.asv-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.asv-image-thumbnail:hover .asv-image-overlay {
+  opacity: 1;
+}
+
+
+.asv-view-icon {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.asv-view-text {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* No Image */
+.asv-no-image {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #f7fafc;
+  border-radius: 4px;
+  color: #a0aec0;
+  font-style: italic;
+  font-size: 12px;
+  border: 1px dashed #e2e8f0;
+}
+
+/* Action Buttons */
+.asv-rt-table__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.asv-rt-table__action-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.asv-rt-table__action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.asv-rt-table__action-btn--view {
+  color: #3182ce;
+}
+
+.asv-rt-table__action-btn--view:hover {
+  background: #ebf8ff;
+  border-color: #3182ce;
+}
+
+.asv-rt-table__action-btn--edit {
+  color: #d69e2e;
+}
+
+.asv-rt-table__action-btn--edit:hover {
+  background: #fefcbf;
+  border-color: #d69e2e;
+}
+
+.asv-rt-table__action-btn--delete {
+  color: #e53e3e;
+}
+
+.asv-rt-table__action-btn--delete:hover {
+  background: #fed7d7;
+  border-color: #e53e3e;
+}
+
+/* Add/Update these styles in your SalesVisit.css */
+
+/* Location Input Wrapper - Fix for spinner alignment */
+.asv-location-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.asv-location-input-wrapper input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.asv-location-icon-btn {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  width: 46px;
+  height: 46px;
+  transition: all 0.3s ease;
+  color: #4a5568;
+  position: relative;
+}
+
+.asv-location-icon-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: #f1f5f9;
+}
+
+.asv-location-icon-btn svg {
+  font-size: 18px;
+  display: block;
+}
+
+/* Spinner styles - Fixed for proper display */
+.asv-spinner {
+  animation: spin 1s linear infinite;
+  font-size: 18px;
+  display: block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ensure the spinner is centered in the button */
+.asv-location-icon-btn .asv-spinner {
+  margin: 0;
+  padding: 0;
+}
+
+.asv-location-input-wrapper input:disabled {
+  background-color: #f8fafc;
+  cursor: not-allowed;
+  color: #64748b;
+}
+
+.asv-location-icon-btn:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+  color: #2d3748;
+  transform: translateY(-1px);
+}
+
+/* Image Upload */
+.asv-image-upload-container {
+  margin-bottom: 12px;
+}
+
+.asv-image-input {
+  display: none;
+}
+
+.asv-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #4299e1;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.asv-upload-btn:hover {
+  background: #3182ce;
+  transform: translateY(-1px);
+}
+
+.asv-upload-btn svg {
+  font-size: 18px;
+}
+
+/* Image Preview */
+.asv-image-preview-container {
+  margin-top: 16px;
+}
+
+.asv-image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 2px dashed #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.asv-image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.asv-remove-image-btn,
+.asv-view-image-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.asv-remove-image-btn {
+  background: #fc8181;
+  color: white;
+}
+
+.asv-remove-image-btn:hover {
+  background: #f56565;
+  transform: translateY(-1px);
+}
+
+.asv-view-image-btn {
+  background: #68d391;
+  color: white;
+}
+
+.asv-view-image-btn:hover {
+  background: #48bb78;
+  transform: translateY(-1px);
+}
+
+.asv-image-hint {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Location Display in View Mode */
+.asv-location-display {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.asv-location-view-btn {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 46px;
+  transition: all 0.3s ease;
+  color: #4a5568;
+}
+
+.asv-location-view-btn:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+  color: #2d3748;
+  transform: translateY(-1px);
+}
+
+/* Image Display in View Mode */
+.asv-image-display {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.asv-image-view-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4299e1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.asv-image-view-btn:hover {
+  background: #3182ce;
+  transform: translateY(-1px);
+}
+
+/* Error and Loading States */
+.asv-sales-visit-error {
+  text-align: center;
+  padding: 40px 20px;
+  color: #e53e3e;
+}
+
+.asv-sales-visits-loading {
+  text-align: center;
+  padding: 40px 20px;
+  color: #4299e1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .asv-sales-visits-content-area {
+    margin-left: 0;
+  }
+
+  .asv-sales-visits-content-area.asv-collapsed {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .asv-sales-visits-content-section {
+    padding: 16px;
+  }
+
+  .asv-form-group-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .asv-sales-visits-table-container {
+    overflow-x: auto;
+  }
+
+  .asv-sales-visit-card {
+    padding: 20px;
+    margin: 16px auto;
+  }
+
+  .asv-form-actions {
+    flex-direction: column;
+  }
+
+  .asv-back-button,
+  .asv-save-button,
+  .asv-cancel-button {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .asv-location-input-wrapper,
+  .asv-location-display,
+  .asv-image-display {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .asv-location-icon-btn,
+  .asv-location-view-btn,
+  .asv-image-view-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .asv-sales-visits-main-title {
+    font-size: 20px;
+  }
+
+  .asv-sales-visit-search-box {
+    max-width: 100%;
+  }
+
+  .asv-rt-table__actions {
+    gap: 4px;
+  }
+
+  .asv-rt-table__action-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .asv-image-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Hover effects for table rows */
+.asv-sales-visits-table-container .asv-rt-table__row:hover {
+  background-color: #f7fafc;
+  transition: background-color 0.2s ease;
+}
+
+/* Table scrollbar styling */
+.asv-sales-visits-table-container::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.asv-visit-image-preview {
+  width: 270px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.asv-sales-visits-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.asv-sales-visits-table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.asv-sales-visits-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Card Content */
+.asv-card-content {
+  width: 100%;
+}
+
+/* Additional spacing for view mode */
+.asv-form-group:last-of-type {
+  margin-bottom: 0;
+}

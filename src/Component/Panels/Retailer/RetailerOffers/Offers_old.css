@@ -1,0 +1,302 @@
+.retailer-mobile-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+
+
+.nav-logo h2 {
+  margin: 0;
+  color: #28a745;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-logo span {
+  font-size: 12px;
+  color: #666;
+  display: block;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #545b62;
+}
+
+.retailer-mobile-main {
+  min-height: calc(100vh - 60px);
+  padding: 80px 20px 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin-top: 10px;
+}
+
+/* Offers Header */
+.offers-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.offers-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  color: #333;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.offers-subtitle {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #ddd 50%, transparent 100%);
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Offers List */
+.offers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.offer-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+.offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.offer-title {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  flex: 1;
+}
+
+.offer-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.offer-badge.featured {
+  background: #ff6b6b;
+  color: white;
+}
+
+.offer-badge.flash {
+  background: #4ecdc4;
+  color: white;
+}
+
+.offer-badge.popular {
+  background: #ffa726;
+  color: white;
+}
+
+.offer-badge.regular {
+  background: #66bb6a;
+  color: white;
+}
+
+.discount-badge {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+/* Different colors for different discount badges */
+.offer-card:nth-child(3) .discount-badge {
+  background: linear-gradient(135deg, #ffa726 0%, #fb8c00 100%);
+  box-shadow: 0 2px 8px rgba(255, 167, 38, 0.3);
+}
+
+.offer-card:nth-child(4) .discount-badge {
+  background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+  box-shadow: 0 2px 8px rgba(102, 187, 106, 0.3);
+}
+
+.offer-description {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.offer-details {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.time-warning {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.clock-icon {
+  font-size: 12px;
+}
+
+.view-details-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.view-details-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.arrow-icon {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.view-details-btn:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+.offer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #ddd 50%, transparent 100%);
+  margin: 25px -25px 0;
+}
+
+.offer-card:last-child .offer-divider {
+  display: none;
+}
+
+/* Mobile-only styles */
+@media (min-width: 768px) {
+  .retailer-mobile-container {
+    display: none;
+  }
+  
+  .retailer-mobile-main::before {
+    content: "Retailer Portal is Mobile Only";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    color: #666;
+    background: white;
+  }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 480px) {
+  .retailer-mobile-main {
+    padding: 80px 15px 15px;
+  }
+  
+  .offer-card {
+    padding: 20px;
+  }
+  
+  .offer-title {
+    font-size: 18px;
+  }
+  
+  .discount-badge {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+  
+  .offer-description {
+    font-size: 14px;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .detail-label, .detail-value {
+    font-size: 13px;
+  }
+}

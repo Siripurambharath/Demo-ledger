@@ -1,0 +1,277 @@
+/* StaffOffers.css - Mobile Specific Styles */
+
+.staff-offersreatiler-mobile {
+  padding: 15px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.staff-offersreatiler-mobile h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Mobile Filters */
+.offersreatiler-filters-section.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.offersreatiler-search-box.mobile {
+  position: relative;
+  width: 100%;
+}
+
+.offersreatiler-search-input.mobile {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+.offersreatiler-search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.offersreatiler-filter-select.mobile {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+/* Mobile Cards */
+.offersreatiler-cards-grid.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.offersreatiler-card-item.mobile {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 4px solid #007bff;
+}
+
+.offersreatiler-card-item.mobile.inactive {
+  border-left-color: #6c757d;
+  opacity: 0.7;
+}
+
+.offersreatiler-card-image {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.offersreatiler-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offersreatiler-no-image {
+  width: 100%;
+  height: 100%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.offersreatiler-card-header {
+  display: flex;
+  justify-content: between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.offersreatiler-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+.offersreatiler-status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.offersreatiler-status-badge.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.offersreatiler-status-badge.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.offersreatiler-card-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.offersreatiler-details-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 6px; */
+  margin-bottom: 15px;
+}
+
+.offersreatiler-detail-item {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.offersreatiler-detail-item strong {
+  color: #333;
+}
+
+/* Mobile Actions */
+.offersreatiler-card-actions.mobile {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.offersreatiler-card-actions.mobile button {
+  flex: 1;
+  min-width: 80px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.offersreatiler-btn-edit {
+  background: #ffc107;
+  color: #212529;
+}
+
+.offersreatiler-btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.offersreatiler-btn-status.active {
+  background: #28a745;
+  color: white;
+}
+
+.offersreatiler-btn-status.inactive {
+  background: #6c757d;
+  color: white;
+}
+
+/* Mobile Loading */
+.offersreatiler-loading.mobile {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Mobile Empty State */
+.offersreatiler-empty-state.mobile {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.offersreatiler-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.offersreatiler-empty-state.mobile h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.offersreatiler-empty-state.mobile p {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.offersreatiler-add-btn.mobile {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Mobile Pagination */
+.offersreatiler-pagination.mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 15px 0;
+}
+
+.offersreatiler-pagination-btn.mobile {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.offersreatiler-pagination-btn.mobile:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.offersreatiler-pagination-info.mobile {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .staff-offersreatiler-mobile {
+    padding: 10px;
+  }
+  
+  .offersreatiler-card-actions.mobile {
+    flex-direction: column;
+  }
+  
+  .offersreatiler-card-actions.mobile button {
+    width: 100%;
+  }
+}

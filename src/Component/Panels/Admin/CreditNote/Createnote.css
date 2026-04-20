@@ -1,0 +1,5 @@
+/* CreateNote.css */
+.table th, .table td { vertical-align: middle; }
+.table th { font-size: 13px; }
+.form-control, .form-select { font-size: 13px; }
+.btn { font-size: 13px; }

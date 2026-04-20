@@ -1,0 +1,445 @@
+.hsn-report-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.hsn-report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hsn-report-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Filter Dropdown Styles - Removed as transaction type filter is gone */
+
+/* Filters Section */
+.hsn-report-filters-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hsn-report-filters-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+/* Search */
+.hsn-report-search-wrapper {
+  flex: 1;
+  min-width: 250px;
+}
+
+.hsn-report-search-input-group {
+  position: relative;
+  width: 100%;
+}
+
+.hsn-report-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 16px;
+}
+
+.hsn-report-search-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 35px 8px 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.hsn-report-search-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.hsn-report-clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hsn-report-clear-btn:hover {
+  color: #ff4444;
+}
+
+/* Date Filters */
+.hsn-report-date-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.hsn-report-date-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 140px;
+}
+
+.hsn-report-date-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.hsn-report-date-input {
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.hsn-report-date-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+/* ✅ APPLY FILTER (Green) */
+.hsn-report-filter-btn {
+  height: 40px;
+  padding: 0 15px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.hsn-report-filter-btn:hover {
+  background-color: #388e3c;
+}
+
+/* ✅ CLEAR FILTER (Red) */
+.hsn-report-filter-btn.clear {
+  background-color: #f44336; /* Red */
+}
+
+.hsn-report-filter-btn.clear:hover {
+  background-color: #d32f2f;
+}
+
+/* Export Button */
+.hsn-report-export-btn {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #4c78af;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.hsn-report-export-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Date filter specific styles */
+.hsn-report-date-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hsn-report-apply-date-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  height: 38px;
+  margin-bottom: 2px;
+}
+
+.hsn-report-apply-date-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.hsn-report-apply-icon {
+  font-size: 12px;
+}
+
+.hsn-report-reset-dates-btn {
+  padding: 8px 16px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  height: 38px;
+  margin-bottom: 2px;
+}
+
+.hsn-report-reset-dates-btn:hover {
+  background: #5a6268;
+}
+
+.hsn-report-active-filters {
+  margin: 12px 0 0 0;
+  padding: 8px 12px;
+  background: #e3f2fd;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hsn-report-filter-badge {
+  background: #2196f3;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.hsn-report-export-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.hsn-report-export-btn--loading {
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.hsn-report-export-icon {
+  font-size: 16px;
+}
+
+/* Clear All Button */
+.hsn-report-clear-all-btn {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.hsn-report-clear-all-btn:hover {
+  background-color: #757575;
+}
+
+/* Table Section */
+.hsn-report-table-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/* Footer Totals */
+.hsn-report-footer {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hsn-report-totals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.hsn-report-totals span {
+  padding: 8px 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border-left: 3px solid #4CAF50;
+}
+
+/* Loading State */
+.hsn-report-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.hsn-report-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.hsn-report-spinner-small {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.hsn-report-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #f44336;
+}
+
+.hsn-report-retry-btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.hsn-report-retry-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hsn-report-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hsn-report-filters-wrapper {
+    flex-direction: column;
+  }
+
+  .hsn-report-search-wrapper {
+    width: 100%;
+  }
+
+  .hsn-report-date-filters {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hsn-report-date-input-wrapper {
+    width: 100%;
+  }
+
+  .hsn-report-export-btn,
+  .hsn-report-clear-all-btn,
+  .hsn-report-clear-date-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hsn-report-totals {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hsn-report-totals span {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Table Styles (if needed) */
+.hsn-report-table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hsn-report-table-section th {
+  background-color: #f5f5f5;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.hsn-report-table-section td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #666;
+}
+
+.hsn-report-table-section tr:hover {
+  background-color: #f9f9f9;
+}

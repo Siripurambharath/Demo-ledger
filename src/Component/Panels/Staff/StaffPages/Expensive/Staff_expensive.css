@@ -1,0 +1,260 @@
+.my-retailers-mobile {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: #000;
+}
+
+.header-text p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.add-retailer-btn-top {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-retailer-btn-top:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.retailers-section {
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #000;
+}
+
+.section-header p {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 15px 0;
+}
+
+.retailers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.retailer-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.retailer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.retailer-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+.retailer-id {
+  font-size: 12px;
+  color: #666;
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.retailer-contact {
+  margin-bottom: 12px;
+}
+
+.contact-phone {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.contact-email {
+  font-size: 12px;
+  color: #666;
+}
+
+.retailer-details {
+  margin-bottom: 12px;
+}
+
+.type-location {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.retailer-type, .retailer-location {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f8f9fa;
+  color: #495057;
+}
+
+.retailer-performance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.performance-score {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.score-icon {
+  color: #dc3545;
+  font-size: 12px;
+}
+
+.sales-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.retailer-status {
+  text-align: right;
+}
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Remove the old floating button styles */
+.add-retailer-btn {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .add-retailer-btn-top {
+    align-self: flex-end;
+    width: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .my-retailers-mobile {
+    padding: 15px;
+  }
+  
+  .retailer-card {
+    padding: 12px;
+  }
+  
+  .add-retailer-btn-top {
+    padding: 10px 12px;
+    font-size: 13px;
+    text-align: center;
+
+ margin: auto !important;
+  }
+}

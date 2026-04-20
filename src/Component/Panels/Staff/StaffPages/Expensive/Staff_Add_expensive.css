@@ -1,0 +1,152 @@
+/* Staff_Add_expensive.css */
+
+/* Container - full screen */
+.Staff_add_expense-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* start from top */
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Card - full width but max limit */
+.Staff_add_expense-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 600px; /* Increased max width for better usability */
+  box-sizing: border-box;
+}
+
+/* Title */
+.Staff_add_expense-card h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  width: 100%; /* Full width input */
+  box-sizing: border-box;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Submit button */
+.submit-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsive (360px–740px) */
+@media (min-width: 360px) and (max-width: 740px) {
+  .Staff_add_expense-container {
+    padding: 10px;
+  
+  }
+
+  .Staff_add_expense-card {
+    padding: 16px;
+    width:550px;
+    border-radius: 12px;
+  }
+
+  .Staff_add_expense-card h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .staff_add_expense{
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  .staff_add_expense h1{
+    font-weight: bold;
+    font-size: 25px;
+  }
+ .staff_add_expense p {
+  font-size: 15px;
+  white-space: normal;       /* allow line breaks */
+  word-wrap: break-word;     /* break long words if needed */
+  overflow-wrap: break-word; /* modern property for same effect */
+}
+.staff_add_expensive-cancel-save{
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+
+
+}
+
+}
+

@@ -1,0 +1,308 @@
+/* ---------------- Layout ---------------- */
+.expense-report-layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #f9fafc;
+}
+
+.expense-report-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+.expense-report-main.collapsed {
+  margin-left: 80px;
+}
+
+/* ---------------- Wrapper & Container ---------------- */
+/* Wrapper centers its content */
+.expense-report-wrapper {
+  flex: 1;
+  padding: 20px;
+  display: flex;              /* ✅ make it flex */
+  justify-content: center;    /* ✅ center horizontally */
+  align-items: flex-start;    /* ✅ top aligned */
+}
+
+/* Container (card) */
+.expense-report-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;   /* ✅ wider card */
+  width: 100%;
+  margin-left:15%;
+}
+
+
+
+/* ---------------- Header ---------------- */
+.expense-report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.expense-report-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.expense-report-btn {
+  background: #4f81bd;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.expense-report-btn:hover {
+  background: #3a68a3;
+}
+
+/* ---------------- Filters ---------------- */
+.expense-report-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.expense-report-entries {
+  font-size: 14px;
+}
+
+.expense-report-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.expense-report-search input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* ---------------- Table ---------------- */
+.expense-report-table {
+  width: 100%;           /* ✅ fill container */
+  border-collapse: collapse;
+  margin: 0 auto;        /* ✅ center if smaller */
+  table-layout: auto;
+}
+
+.expense-report-table th,
+.expense-report-table td {
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.expense-report-table th {
+  background: #4f81bd;
+  color: #fff;
+  font-weight: bold;
+}
+
+.expense-report-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.expense-report-table tr:hover {
+  background: #f1f5fb;
+}
+
+.expense-report-empty {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  padding: 20px;
+}
+
+/* ---------------- Footer ---------------- */
+.expense-report-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+}
+
+.expense-report-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expense-report-pagebtn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.expense-report-pagebtn:disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
+
+.expense-report-pageindex {
+  font-weight: 600;
+}
+
+/* ---------------- Modal ---------------- */
+.expense-report-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+}
+
+.expense-report-modal-content {
+  width: 400px;
+  background: #fff;
+  height: 100%;
+  padding: 20px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-report-close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  align-self: flex-end;
+  cursor: pointer;
+  color: #555;
+}
+
+.expense-report-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.expense-report-modal-options {
+  display: flex;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.expense-report-generate-btn {
+  background: #4f81bd;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.expense-report-generate-btn:hover {
+  background: #3a68a3;
+}
+
+/* ---------------- Recent Reports ---------------- */
+.expense-report-recent-reports {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expense-report-report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafc;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.expense-report-report-item span {
+  font-size: 13px;
+  color: #333;
+}
+
+.expense-report-report-item button {
+  background: #4f81bd;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.expense-report-report-item button:hover {
+  background: #3a68a3;
+}
+
+.expense-report-filterbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.expense-report-filterbar .date-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-report-filterbar label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.expense-report-filterbar input[type="date"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 160px;
+}
+
+.expense-report-btn.success {
+  background: #00acc1;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease-in-out;
+  height: 36px; /* aligns with date fields */
+}
+
+.expense-report-btn.success:hover {
+  opacity: 0.9;
+}

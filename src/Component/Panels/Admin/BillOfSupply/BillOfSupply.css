@@ -1,0 +1,333 @@
+/* BillOfSupply.css */
+.billofsupply-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.billofsupply-main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.billofsupply-main-content.collapsed {
+  margin-left: 80px;
+}
+
+.billofsupply-content-area {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 60px);
+}
+
+/* Header Styles */
+.billofsupply-header-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.billofsupply-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.billofsupply-title-section {
+  flex: 1;
+}
+
+.billofsupply-main-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.billofsupply-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Stats Grid */
+.billofsupply-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.billofsupply-stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-left: 4px solid #e5e7eb;
+}
+
+.billofsupply-stat-card--total { border-left-color: #10b981; }
+.billofsupply-stat-card--active { border-left-color: #3b82f6; }
+.billofsupply-stat-card--completed { border-left-color: #f59e0b; }
+.billofsupply-stat-card--pending { border-left-color: #ef4444; }
+
+.billofsupply-stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.billofsupply-stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.billofsupply-stat-change {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.billofsupply-stat-change--positive { color: #10b981; }
+.billofsupply-stat-change--negative { color: #ef4444; }
+
+/* Actions Section */
+.billofsupply-actions-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Custom Table Styles */
+.bill-customer-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-customer-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.bill-customer-id {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.bill-payment-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.bill-payment-status--paid {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.bill-payment-status--pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.bill-payment-status--overdue {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.bill-payment-status--draft {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+/* Quotation Container */
+.quotation-container {
+  background: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  font-size: 14px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.searchbarr {
+  max-width: 250px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .billofsupply-main-content {
+    margin-left: 0;
+  }
+
+  .billofsupply-main-content.collapsed {
+    margin-left: 0;
+  }
+
+  .billofsupply-header-top {
+    flex-direction: column;
+  }
+
+  .billofsupply-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .billofsupply-actions-section .row {
+    flex-direction: column;
+  }
+
+  .billofsupply-actions-section .col-md-auto {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .billofsupply-actions-section .d-flex {
+    flex-direction: column;
+  }
+
+  .billofsupply-actions-section .form-select,
+  .billofsupply-actions-section .form-control {
+    margin-bottom: 10px;
+    margin-right: 0 !important;
+  }
+}
+
+/* Form specific styles */
+.form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Button styles */
+.btn-success {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+.btn-info {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-info:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+
+/* Tabs Section Styles for Bill of Supply */
+.billofsupply-tabs-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.billofsupply-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.billofsupply-tab {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.billofsupply-tab:hover {
+  color: #374151;
+  background-color: #f9fafb;
+}
+
+.billofsupply-tab--active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .billofsupply-tabs-container {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  
+  .billofsupply-tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Payment Status Styles */
+.bill-payment-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.bill-payment-status--paid {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.bill-payment-status--pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.bill-payment-status--overdue {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Customer Cell Styles */
+.bill-customer-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-customer-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.bill-customer-id {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}

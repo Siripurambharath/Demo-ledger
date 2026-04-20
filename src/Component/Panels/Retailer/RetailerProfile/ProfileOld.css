@@ -1,0 +1,335 @@
+/* Profile.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.profile-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.profile-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #007AFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #000;
+}
+
+.user-details p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: #E8F5E8;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #2E7D32;
+}
+
+.verified-icon {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Performance Section */
+.performance-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.performance-cards {
+  display: flex;
+  gap: 12px;
+}
+
+.performance-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.performance-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.score-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007AFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.score-circle.success {
+  background-color: #4CAF50;
+}
+
+.performance-info {
+  flex: 1;
+}
+
+.performance-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.performance-label {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+/* Business Details Section */
+.business-details-section {
+  margin-bottom: 20px;
+}
+
+.details-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Account Settings Section */
+.account-settings-section {
+  margin-bottom: 20px;
+}
+
+.settings-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-item:hover {
+  background-color: #f8f9fa;
+}
+
+.settings-icon {
+  font-size: 18px;
+  margin-right: 12px;
+  width: 24px;
+  text-align: center;
+}
+
+.settings-text {
+  flex: 1;
+  font-size: 15px;
+  color: #000;
+  font-weight: 500;
+}
+
+.settings-arrow {
+  font-size: 18px;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 16px 12px;
+  }
+  
+  .profile-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .user-info-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .verified-badge {
+    align-self: flex-start;
+    margin-left: 62px;
+  }
+  
+  .performance-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .performance-content {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .profile-card, .performance-card, .details-card, .settings-card {
+    padding: 12px;
+  }
+  
+  .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 22.5px;
+    font-size: 16px;
+  }
+  
+  .score-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  
+  .user-details h3 {
+    font-size: 15px;
+  }
+  
+  .user-details p {
+    font-size: 13px;
+  }
+  
+  .verified-badge {
+    margin-left: 57px;
+    font-size: 11px;
+  }
+  
+  .performance-value {
+    font-size: 13px;
+  }
+  
+  .performance-label {
+    font-size: 11px;
+  }
+  
+  .settings-item {
+    padding: 14px 12px;
+  }
+  
+  .settings-text {
+    font-size: 14px;
+  }
+}

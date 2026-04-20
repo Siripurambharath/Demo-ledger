@@ -1,0 +1,57 @@
+.purchased-items-wrapper .action-icon {
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+
+.form-wrapper {
+  margin: 0 auto;
+  padding: 15px;
+}
+
+
+
+.summary-box {
+  max-width: 300px;
+  float: right;
+}
+
+
+
+.sales-items-search-container {
+  max-width: 420px;
+  margin-bottom: 20px;
+}
+
+/* Search Box */
+.sales-items-search-box {
+  position: relative;
+  width: 100%;
+}
+
+.sales-items-search-input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+
+.sales-items-search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.sales-items-search-input::placeholder {
+  color: #a0aec0;
+}
+
+.sales-items-search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+}
+

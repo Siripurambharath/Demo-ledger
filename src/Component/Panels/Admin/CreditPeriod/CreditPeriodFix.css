@@ -1,0 +1,311 @@
+.credit-period-page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.credit-period-content-with-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 250px);
+}
+
+.credit-period-content-with-header.collapsed {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+}
+
+.credit-period-main-content {
+  flex: 1;
+  padding: 0;
+  background: #f8f9fa;
+  min-height: calc(100vh - 70px);
+  width: 100%;
+}
+
+.credit-period-container {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-header-section {
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #718096;
+  margin: 0;
+  font-weight: 400;
+}
+
+.credit-period-controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-controls {
+  flex: 1;
+  max-width: 400px;
+}
+
+.action-controls {
+  flex-shrink: 0;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 45px 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+
+.add-credit-period-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.add-credit-period-btn:hover {
+  background: #3182ce;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.table-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.rt-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rt-table__header {
+  background: #f7fafc !important;
+  padding: 16px 12px !important;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568 !important;
+  font-size: 14px;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rt-table__cell {
+  padding: 16px 12px !important;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.rt-table__row:hover {
+  background: #fafafa !important;
+}
+
+.rt-table__row:last-child .rt-table__cell {
+  border-bottom: none;
+}
+
+.credit-period {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.credit-percentage {
+  color: #38a169;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.status-active {
+  background: #f0fff4;
+  color: #38a169;
+  border: 1px solid #c6f6d5;
+}
+
+.status-inactive {
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7;
+}
+
+.credit-period-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit-period-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+}
+
+.credit-period-action-btn:hover {
+  transform: scale(1.1);
+}
+
+.credit-period-edit-btn {
+  color: #52c41a;
+}
+
+.credit-period-edit-btn:hover {
+  background-color: #f6ffed;
+}
+
+.credit-period-delete-btn {
+  color: #ff4d4f;
+}
+
+.credit-period-delete-btn:hover {
+  background-color: #fff2f0;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 300px;
+}
+
+.loading-container .loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .credit-period-content-with-header {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .credit-period-content-with-header.collapsed {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .credit-period-container {
+    padding: 15px;
+  }
+  
+  .credit-period-controls-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-controls {
+    max-width: 100%;
+  }
+  
+  .action-controls {
+    width: 100%;
+  }
+  
+  .add-credit-period-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+}

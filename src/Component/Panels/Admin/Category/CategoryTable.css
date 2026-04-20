@@ -1,0 +1,354 @@
+/* CategoryTable.css */
+.category-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.category-content-area {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.category-content-area.collapsed {
+  margin-left: 80px;
+}
+
+.category-main-content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+.category-content-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-header-top {
+  margin-bottom: 24px;
+}
+
+.category-title-section h1.category-main-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.category-title-section .category-subtitle {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.category-search-add-container {
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.category-search-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.category-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.category-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.category-search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.category-search-icon {
+  position: absolute;
+  left: 16px;
+  color: #a0aec0;
+}
+
+.category-add-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-add-button:hover {
+  background: linear-gradient(135deg, #3182ce, #2b6cb0);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.category-add-icon {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.category-list-section {
+  margin-top: 24px;
+}
+
+.category-section-header {
+  margin-bottom: 20px;
+}
+
+.category-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.category-section-description {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.category-table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+/* Table specific styles */
+.category-table__id-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-table__id {
+  font-weight: 700;
+  color: #3498db;
+  font-size: 14px;
+  background-color: #e8f4fd;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.category-table__category-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-table__header-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-table__category-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.category-table__category-description {
+  font-size: 12px;
+  color: #718096;
+}
+
+.category-table__meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.category-table__parent-tag {
+  background-color: #e8f6f3;
+  color: #27ae60;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.category-table__product-count {
+  background-color: #fdebd0;
+  color: #e67e22;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.category-table__status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.category-table__status--active {
+  background-color: #d5f4e6;
+  color: #27ae60;
+}
+
+.category-table__status--inactive {
+  background-color: #fadbd8;
+  color: #e74c3c;
+}
+
+.category-table__discount-cell {
+  display: flex;
+  align-items: center;
+}
+
+.category-table__discount-value {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.category-table__discount-value.has-discount {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.category-table__discount-value.no-discount {
+  background-color: #edf2f7;
+  color: #718096;
+}
+
+.category-table__discount-badge {
+  background: #28a745;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.category-table__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.category-table__action-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-table__action-btn--view {
+  background-color: #e6fffa;
+  color: #234e52;
+}
+
+.category-table__action-btn--edit {
+  background-color: #ebf8ff;
+  color: #2a4365;
+}
+
+.category-table__action-btn--delete {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.category-table__action-btn:hover {
+  transform: scale(1.1);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 16px;
+  color: #718096;
+}
+
+.error-message {
+  text-align: center;
+  padding: 40px;
+  color: #e53e3e;
+}
+
+.retry-button {
+  padding: 10px 20px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.retry-button:hover {
+  background-color: #3182ce;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-content-area {
+    margin-left: 0;
+  }
+  
+  .category-content-area.collapsed {
+    margin-left: 0;
+  }
+  
+  .category-search-add-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .category-search-container {
+    max-width: none;
+  }
+  
+  .category-add-button {
+    justify-content: center;
+  }
+  
+  .category-table__actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .category-table__meta-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

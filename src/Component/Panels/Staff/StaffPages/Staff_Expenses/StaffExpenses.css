@@ -1,0 +1,305 @@
+.staff-expenses-mobile {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-bottom: 100px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: #000;
+}
+
+.header-text p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.add-expense-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-expense-btn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.expenses-section {
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #000;
+}
+
+.section-header p {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 15px 0;
+}
+
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expense-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.expense-id {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.expense-category-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.category-badge {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+}
+
+.date-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.date-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.expense-amount {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.expense-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.view-details-btn, .edit-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-details-btn {
+  background: #007bff;
+  color: white;
+}
+
+.view-details-btn:hover {
+  background: #0056b3;
+}
+
+.edit-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #545b62;
+}
+
+.no-expenses {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed #e0e0e0;
+}
+
+.no-expenses p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .add-expense-btn {
+    align-self: flex-end;
+    width: auto;
+  }
+  
+  .expense-category-date {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .date-info {
+    align-items: flex-start;
+  }
+  
+  .expense-actions {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 360px) {
+  .staff-expenses-mobile {
+    padding: 15px;
+  }
+  
+  .expense-card {
+    padding: 12px;
+  }
+  
+  .add-expense-btn {
+    padding: 10px 12px;
+    font-size: 13px;
+    margin: auto !important;
+  }
+  
+  .expense-amount {
+    font-size: 20px;
+  }
+  .expense-actions{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

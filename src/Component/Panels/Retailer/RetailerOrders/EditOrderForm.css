@@ -1,0 +1,227 @@
+.edit-order-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.edit-order-form {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.form-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.readonly-input {
+  background-color: #f8f9fa;
+  color: #666;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.error-message {
+  background: #fee;
+  color: #c00;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #fcc;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancel-btn,
+.update-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: #5a6268;
+}
+
+.update-btn {
+  background: #28a745;
+  color: white;
+}
+
+.update-btn:hover:not(:disabled) {
+  background: #218838;
+}
+
+.cancel-btn:disabled,
+.update-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .edit-order-form-overlay {
+    padding: 10px;
+  }
+  
+  .edit-order-form {
+    padding: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.edit-order-form .price-breakdown {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border: 1px solid #e9ecef;
+}
+
+.edit-order-form .price-breakdown .form-group {
+  margin-bottom: 10px;
+}
+
+.edit-order-form .tax-type-input,
+.edit-order-form .gst-rate-input,
+.edit-order-form .base-price-input,
+.edit-order-form .gst-amount-input,
+.edit-order-form .total-price-input {
+  background: white;
+  font-weight: bold;
+}
+
+.edit-order-form .total-price-input {
+  background: #e7f3ff;
+  border: 2px solid #007bff;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.edit-order-form .product-info {
+  background: #f0f8ff;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  border-left: 4px solid #007bff;
+}
+
+.edit-order-form .product-info .info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.edit-order-form .product-info .info-item:last-child {
+  margin-bottom: 0;
+}
+
+.edit-order-form .product-info .info-item span:first-child {
+  font-weight: 600;
+  color: #555;
+}
+
+.edit-order-form .product-info .info-item span:last-child {
+  font-weight: 500;
+  color: #333;
+}

@@ -1,0 +1,291 @@
+/* History.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.history-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.history-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.history-header {
+  margin-bottom: 20px;
+}
+
+.transaction-history-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.transaction-history-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.summary-cards {
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.total-card {
+  margin-bottom: 12px;
+}
+
+.summary-row {
+  display: flex;
+  gap: 12px;
+}
+
+.half-card {
+  flex: 1;
+}
+
+.card-content h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card-content .amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007AFF;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transaction-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.transaction-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.transaction-id {
+  font-size: 12px;
+  color: #999;
+}
+
+.transaction-amount-section {
+  text-align: right;
+}
+
+.transaction-amount {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.transaction-type-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.transaction-type {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.transaction-type.kaccha {
+  background-color: #FFF9C4;
+  color: #F57F17;
+}
+
+.transaction-type.pakka {
+  background-color: #E1F5FE;
+  color: #0277BD;
+}
+
+.transaction-status {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.transaction-status.completed {
+  color: #4CAF50;
+}
+
+.transaction-status.pending {
+  color: #FF9800;
+}
+
+.transaction-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-details-btn {
+  background-color: transparent;
+  border: 1px solid #007AFF;
+  color: #007AFF;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .history-container {
+    padding: 16px 12px;
+  }
+  
+  .history-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .transaction-main {
+    flex-direction: column;
+  }
+  
+  .transaction-amount-section {
+    text-align: left;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .transaction-type-status {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .summary-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .transaction-amount-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .transaction-type-status {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+  
+  .transaction-card {
+    padding: 12px;
+  }
+  
+  .product-name {
+    font-size: 15px;
+  }
+  
+  .transaction-amount {
+    font-size: 16px;
+  }
+}
+
+/* Scroll behavior for transaction list */
+.transactions-list {
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+}
+
+.transactions-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.transactions-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.transactions-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.transactions-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

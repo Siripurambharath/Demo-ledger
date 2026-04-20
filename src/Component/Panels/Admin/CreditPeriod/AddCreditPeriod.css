@@ -1,0 +1,326 @@
+.add-credit-period-page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.add-credit-period-main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.add-credit-period-main-content.collapsed {
+  margin-left: 80px;
+}
+
+.add-credit-period-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header-section {
+  margin-bottom: 2rem;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.add-credit-period-form-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.credit-period-form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+  align-items: flex-start;
+}
+
+.adminform-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.adminform-group.half-width {
+  flex: 1 1 calc(50% - 0.75rem);
+  min-width: 0;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.form-input,
+.form-select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input:disabled,
+.form-select:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23666' d='m0 1 2 2 2-2z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
+.error-message {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-icon {
+  font-size: 1.1rem;
+}
+
+.field-note {
+  color: #666;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.add-credit-period-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.add-credit-period-cancel-btn,
+.add-credit-period-submit-btn {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  width: 140px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+.add-credit-period-cancel-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.add-credit-period-cancel-btn:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.add-credit-period-submit-btn {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
+}
+
+.add-credit-period-submit-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+
+.add-credit-period-loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: add-credit-period-spin 1s linear infinite;
+}
+
+@keyframes add-credit-period-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.add-credit-period-cancel-btn:disabled,
+.add-credit-period-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.add-credit-period-submit-btn:disabled {
+  background-color: #9ca3af;
+  box-shadow: none;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 300px;
+}
+
+.loading-container .loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .add-credit-period-main-content {
+    margin-left: 80px;
+    padding: 15px;
+  }
+  
+  .add-credit-period-main-content.collapsed {
+    margin-left: 80px;
+  }
+  
+  .add-credit-period-form-section {
+    padding: 2rem;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-credit-period-main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .add-credit-period-main-content.collapsed {
+    margin-left: 0;
+  }
+  
+  .add-credit-period-container {
+    padding: 0;
+  }
+  
+  .page-header-section {
+    padding: 0 15px;
+  }
+  
+  .add-credit-period-form-section {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 0;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .adminform-group.half-width {
+    flex: 1 1 100%;
+  }
+  
+  .add-credit-period-form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .add-credit-period-cancel-btn,
+  .add-credit-period-submit-btn {
+    width: 100%;
+    min-width: auto;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-credit-period-form-section {
+    padding: 1.25rem;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-input,
+  .form-select {
+    padding: 0.75rem;
+  }
+  
+  .add-credit-period-cancel-btn,
+  .add-credit-period-submit-btn {
+    padding: 0.75rem 1.5rem;
+  }
+}

@@ -1,0 +1,100 @@
+/* QRCodeGenerator.css */
+.qr-code-card {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+
+.qr-code-body {
+  padding: 25px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.qr-code-box {
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+
+
+.qr-code-box canvas {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.payment-instructions {
+  padding: 10px;
+  background: #f0f8ff;
+  border-radius: 10px;
+  border-left: 4px solid #007bff;
+}
+
+.payment-instructions small {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .qr-code-card {
+    max-width: 500px;
+  }
+  
+  .qr-code-box canvas {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .qr-code-card {
+    max-width: 100%;
+  }
+  
+  .qr-code-body {
+    padding: 15px !important;
+  }
+  
+  .qr-code-box {
+    padding: 15px;
+  }
+  
+  .qr-code-box canvas {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .qr-code-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .qr-code-box canvas {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .qr-code-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .qr-code-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    max-width: 100%;
+  }
+  
+  .qr-code-box canvas {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}

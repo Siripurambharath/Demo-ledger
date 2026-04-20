@@ -1,0 +1,776 @@
+/* Retailer Reports Specific Styles */
+.ret-rep {
+  width: 100%;
+}
+
+/* Stats Grid */
+.ret-rep-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+/* Clear Dates button */
+.ret-rep-clear-dates-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  height: 38px;
+}
+
+.ret-rep-clear-dates-btn:hover {
+  background: #f57c00;
+}
+
+/* Clear All Filters wrapper and button */
+.ret-rep-clear-all-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0;
+}
+
+.ret-rep-clear-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.ret-rep-clear-all-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+/* Active filters section */
+.ret-rep-active-filters {
+  margin: 12px 0;
+  padding: 10px 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #e9ecef;
+}
+
+.ret-rep-filter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2196f3;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ret-rep-filter-badge-remove {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.ret-rep-filter-badge-remove:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Apply Date Filter button */
+.ret-rep-apply-date-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  height: 38px;
+}
+
+.ret-rep-apply-date-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+.ret-rep-stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.ret-rep-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ret-rep-stat-card h4 {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.ret-rep-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.ret-rep-stat-number.ret-rep-positive {
+  color: #10b981;
+}
+
+.ret-rep-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.ret-rep-icon {
+  font-size: 2rem;
+  color: #4F81FF;
+}
+
+.ret-rep-mt-3 {
+  margin-top: 1rem;
+}
+
+/* Charts Section */
+.ret-rep-charts-section {
+  margin-bottom: 50px;
+}
+
+.ret-rep-charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 25px;
+}
+
+@media (max-width: 1100px) {
+  .ret-rep-charts-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ret-rep-chart-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ret-rep-chart-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ret-rep-chart-icon {
+  font-size: 1.2rem;
+  color: #4F81FF;
+}
+
+.ret-rep-chart-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.ret-rep-chart-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-left: auto;
+}
+
+.ret-rep-chart-wrapper {
+  flex: 1;
+  position: relative;
+  height: 320px;
+}
+
+.ret-rep-chart-loading,
+.ret-rep-chart-no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Table Section */
+.ret-rep-table-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ret-rep-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ret-rep-table-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Search Box Styles - Fixed and Clean */
+.ret-rep-search-container {
+  min-width: 300px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.ret-rep-search-box {
+  position: relative;
+  width: 100%;
+}
+
+.ret-rep-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 0.875rem;
+  z-index: 10;
+}
+
+.ret-rep-search-input {
+  width: 100%;
+  padding: 12px 45px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 0.95rem;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.ret-rep-search-input:focus {
+  border-color: #3b82f6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.ret-rep-search-clear {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.ret-rep-search-clear:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Loading and No Data States */
+.ret-rep-loading,
+.ret-rep-no-data {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+  font-size: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ret-rep-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .ret-rep-stat-card {
+    padding: 20px;
+  }
+  
+  .ret-rep-stat-number {
+    font-size: 2rem;
+  }
+  
+  .ret-rep-charts-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .ret-rep-chart-card {
+    height: 400px;
+    padding: 20px;
+  }
+  
+  .ret-rep-table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .ret-rep-search-container {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  .ret-rep-chart-wrapper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ret-rep-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ret-rep-stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .ret-rep-chart-card {
+    height: 350px;
+    padding: 15px;
+  }
+  
+  .ret-rep-chart-header {
+    flex-wrap: wrap;
+  }
+  
+  .ret-rep-chart-subtitle {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .ret-rep-chart-wrapper {
+    height: 250px;
+  }
+}
+/* ========== RETAILER REPORT FILTER ROW STYLES ========== */
+.ret-rep-filter-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ret-rep-search-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.ret-rep-date-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.ret-rep-date-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.ret-rep-date-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ret-rep-date-field label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ret-rep-date-input {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 140px;
+  background: white;
+  color: #374151;
+}
+
+.ret-rep-date-input:focus {
+  outline: none;
+  border-color: #4F81FF;
+  box-shadow: 0 0 0 3px rgba(79, 129, 255, 0.1);
+}
+
+.ret-rep-generate-btn {
+  background: #4F81FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ret-rep-generate-btn:hover {
+  background: #3b71f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 129, 255, 0.2);
+}
+
+.ret-rep-generate-icon {
+  font-size: 14px;
+}
+
+/* Stats period text */
+.ret-rep-stat-period {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+/* ========== MODAL STYLES ========== */
+.ret-rep-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.ret-rep-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: retRepModalSlide 0.3s ease;
+}
+
+@keyframes retRepModalSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ret-rep-close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ret-rep-close-modal:hover {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.ret-rep-modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.ret-rep-modal-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.ret-rep-format-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.ret-rep-format-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.ret-rep-format-option.selected {
+  border-color: #4F81FF;
+  background: rgba(79, 129, 255, 0.05);
+}
+
+.ret-rep-format-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ret-rep-format-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #4F81FF;
+}
+
+.ret-rep-format-option span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.ret-rep-generate-modal-btn {
+  width: 100%;
+  background: #4F81FF;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.ret-rep-generate-modal-btn:hover:not(:disabled) {
+  background: #3b71f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 129, 255, 0.2);
+}
+
+.ret-rep-generate-modal-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.ret-rep-modal-footer {
+  text-align: center;
+}
+
+.ret-rep-modal-footer p {
+  color: #9ca3af;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ret-rep-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .ret-rep-search-left,
+  .ret-rep-date-right {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .ret-rep-date-group {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .ret-rep-date-field {
+    flex: 1;
+    min-width: 140px;
+  }
+  
+  .ret-rep-format-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ret-rep-date-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .ret-rep-date-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ret-rep-date-input {
+    width: 100%;
+  }
+  
+  .ret-rep-generate-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .ret-rep-modal-content {
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .ret-rep-stat-period {
+    font-size: 11px;
+  }
+}
+/* Add to RetailerReport.css */
+
+/* Clear filter button */
+.ret-rep-clear-filter-btn {
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.ret-rep-clear-filter-btn:hover {
+  background: #d1d5db;
+}
+
+/* Negative growth style */
+.ret-rep-negative {
+  color: #ef4444 !important;
+}
+
+/* Chart improvements */
+.ret-rep-chart-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-left: auto;
+}
+
+.ret-rep-chart-no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Search box improvements */
+.ret-rep-search-input {
+  padding: 12px 45px 12px 40px !important;
+}
+
+.ret-rep-search-icon {
+  left: 12px !important;
+}

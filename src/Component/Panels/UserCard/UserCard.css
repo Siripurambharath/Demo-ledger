@@ -1,0 +1,121 @@
+/* UserCard.css */
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  background-color: #111827;
+  color: #fff;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* User Info */
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-btn:hover {
+  background-color: #1f2937;
+}
+
+.logout-icon {
+  width: 22px;
+  height: 22px;
+  color: #fff;
+}
+
+/* User Card Collapsed State */
+.user-card.collapsed {
+  justify-content: center;
+  padding: 12px;
+  max-width: none; /* Remove max-width restriction */
+}
+
+.user-card.collapsed .user-info {
+  display: none;
+}
+
+/* Logout button icon-only state */
+.logout-btn.icon-only {
+  margin: 0;
+  padding: 8px;
+}
+
+/* Add proper spacing between content and icon in large screen */
+.user-card:not(.collapsed) {
+  gap: 16px;
+}
+
+.user-card:not(.collapsed) .user-info {
+  flex: 1;
+}
+
+.user-card:not(.collapsed) .logout-btn {
+  flex-shrink: 0;
+}
+
+/* Responsive - Ensure UserCard is always visible */
+@media (max-width: 768px) {
+  .user-card {
+    max-width: 100%;
+    padding: 10px 12px;
+  }
+
+  .user-card.collapsed {
+    padding: 10px;
+    max-width: 100%; /* Ensure full width on mobile */
+  }
+
+  .user-name {
+    font-size: 13px;
+  }
+
+  .user-email {
+    font-size: 11px;
+  }
+
+  .logout-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .user-card {
+    padding: 8px 10px;
+  }
+  
+  .user-card.collapsed {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,558 @@
+.sales-visits-mobile {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-bottom: 100px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+/* Location text styling */
+.location-text {
+  font-size: 12px;
+  color: #666;
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* View Image button */
+.view-image-btn {
+  background: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-image-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Edit form textarea styling */
+.edit-input[type="textarea"],
+.edit-input[rows] {
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .location-text {
+    max-width: 150px;
+  }
+  
+  .view-image-btn {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}
+.header-text h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: #000;
+}
+
+.header-text p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.log-visit-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.log-visit-btn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.tabs-section {
+  margin-bottom: 20px;
+}
+
+.tabs-container {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  padding: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-item {
+  flex: 1;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.tab-item.active {
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+/* Sales Visits List */
+.sales-visits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.visit-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.visit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.visit-id {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.outcome-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.outcome-badge.successful {
+  background: #d4edda;
+  color: #155724;
+}
+
+.outcome-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.outcome-badge.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.visit-retailer {
+  margin-bottom: 12px;
+}
+
+.retailer-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.retailer-id {
+  font-size: 12px;
+  color: #666;
+}
+
+.visit-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Transactions List */
+.transactions-section {
+  margin-top: 10px;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transaction-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction-id {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.status-badge.complete {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.overdue {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.transaction-retailer {
+  margin-bottom: 12px;
+}
+
+.retailer-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.transaction-amount-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.type-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #e9ecef;
+  color: #495057;
+}
+
+.transaction-description {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.transaction-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.date-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+.date-value.overdue {
+  color: #dc3545;
+}
+
+/* Card Actions */
+.card-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-icon, .delete-icon {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #007bff;
+}
+
+.delete-icon:hover {
+  color: #dc3545;
+}
+
+/* Edit Form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-input {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+}
+.update-btn,
+.cancel-btn {
+  width: 120px; /* Fixed width for consistency */
+  text-align: center; /* Center the text */
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px; /* Space between buttons if needed */
+}
+
+/* Hover effects */
+.update-btn:hover {
+  background: #0056b3;
+}
+
+.cancel-btn {
+  background: #6c757d;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .log-visit-btn {
+    align-self: flex-end;
+    width: auto;
+  }
+  
+  .tabs-container {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 740px) {
+  .sales-visits-mobile {
+    padding: 15px;
+  }
+  
+  .visit-card,
+  .transaction-card {
+    padding: 12px;
+  }
+  
+  .log-visit-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .transaction-amount-type {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .header-text{
+    margin-top: -50px;
+    text-align: center;
+  }
+
+
+.header-content {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  width: 100%;
+  gap: 10px;              
+}
+
+/* Header text */
+.header-text h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.header-text p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Log Visit Button */
+.log-visit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  display: block;     
+  margin: 0 auto;     
+}
+.log-visit-btn:hover {
+  background-color: #0056b3;
+}
+
+  
+  .type-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 360px) {
+  .transaction-card {
+    padding: 12px;
+  }
+  
+  .amount {
+    font-size: 16px;
+  }
+}

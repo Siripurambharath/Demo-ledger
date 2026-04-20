@@ -1,0 +1,463 @@
+/* DeliveryChallan.css */
+.delivery-challan-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.delivery-challan-main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.delivery-challan-main-content.collapsed {
+  margin-left: 80px;
+}
+
+.delivery-challan-content-area {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 60px);
+}
+
+/* Header Styles */
+.delivery-challan-header-section {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.delivery-challan-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.delivery-challan-title-section {
+  flex: 1;
+}
+
+.delivery-challan-main-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.delivery-challan-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Stats Grid */
+.delivery-challan-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.delivery-challan-stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-left: 4px solid #e5e7eb;
+}
+
+.delivery-challan-stat-card--total { border-left-color: #10b981; }
+.delivery-challan-stat-card--dispatched { border-left-color: #3b82f6; }
+.delivery-challan-stat-card--transit { border-left-color: #f59e0b; }
+.delivery-challan-stat-card--delivered { border-left-color: #8b5cf6; }
+
+.delivery-challan-stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.delivery-challan-stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.delivery-challan-stat-change {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.delivery-challan-stat-change--positive { color: #10b981; }
+.delivery-challan-stat-change--negative { color: #ef4444; }
+
+/* Custom Table Cell Styles */
+.delivery-customer-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-customer-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.delivery-customer-email {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.delivery-dispatch-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-vehicle {
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.delivery-driver {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.delivery-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.delivery-status--dispatched {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.delivery-status--in-transit {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.delivery-status--delivered {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.delivery-status--pending {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.delivery-actions {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.delivery-actions .btn {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* Quotation Container */
+.quotation-container {
+  background: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+  font-size: 14px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.searchbarr {
+  max-width: 250px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .delivery-challan-main-content {
+    margin-left: 0;
+  }
+
+  .delivery-challan-main-content.collapsed {
+    margin-left: 0;
+  }
+
+  .delivery-challan-header-top {
+    flex-direction: column;
+  }
+
+  .delivery-challan-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-actions {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .delivery-actions .btn {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+}
+
+/* Form specific styles */
+.form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Button styles */
+.btn-info {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+}
+
+.btn-info:hover {
+  background-color: #31d2f2;
+  border-color: #31d2f2;
+}
+
+.btn-success {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+  border-color: #157347;
+}
+
+
+/* Tabs Section Styles for Delivery Challan */
+.delivery-challan-tabs-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.delivery-challan-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.delivery-challan-tab {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.delivery-challan-tab:hover {
+  color: #374151;
+  background-color: #f9fafb;
+}
+
+.delivery-challan-tab--active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .delivery-challan-tabs-container {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  
+  .delivery-challan-tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Delivery Challan Table Specific Styles */
+.delivery-customer-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-customer-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.delivery-customer-email {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.delivery-dispatch-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-vehicle {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.delivery-driver {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.delivery-status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.delivery-status--dispatched {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.delivery-status--transit {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.delivery-status--delivered {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.delivery-status--pending {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.delivery-status--cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.delivery-actions {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.delivery-actions .btn {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* Stats Cards Styles */
+.delivery-challan-stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #e5e7eb;
+}
+
+.delivery-challan-stat-card--total {
+  border-left-color: #3b82f6;
+}
+
+.delivery-challan-stat-card--dispatched {
+  border-left-color: #f59e0b;
+}
+
+.delivery-challan-stat-card--transit {
+  border-left-color: #6366f1;
+}
+
+.delivery-challan-stat-card--delivered {
+  border-left-color: #10b981;
+}
+
+.delivery-challan-stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.delivery-challan-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.delivery-challan-stat-change {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.delivery-challan-stat-change--positive {
+  color: #10b981;
+}
+
+.delivery-challan-stat-change--negative {
+  color: #ef4444;
+}
+
+.delivery-challan-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* Additional Delivery Challan Specific Styles */
+.delivery-challan-header-section {
+  margin-bottom: 24px;
+}
+
+.delivery-challan-main-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.delivery-challan-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+.delivery-challan-actions-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

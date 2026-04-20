@@ -1,0 +1,355 @@
+.products-page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Main content wrapper */
+.products-content-with-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 250px);
+}
+
+.products-content-with-header.collapsed {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+}
+
+.products-main-content {
+  flex: 1;
+  padding: 0;
+  background: #f8f9fa;
+  min-height: calc(100vh - 80px);
+  /* margin-top: 80px; */
+  width: 100%;
+}
+
+.products-container {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Page Header Section */
+.page-header-section {
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+/* Controls Section */
+.products-controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-controls {
+  flex: 1;
+  max-width: 400px;
+}
+
+.action-controls {
+  flex-shrink: 0;
+}
+
+/* Search Box */
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 45px 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Add Product Button */
+.add-product-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.add-product-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Table Section */
+.table-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Product image styling */
+.product-image {
+  width: 40px;
+  height: 40px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 0 auto;
+}
+
+/* Product Info Styles */
+.product-name {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.product-price {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* Category badge styling */
+.category-badge {
+  background: #f0f9ff;
+  color: #0369a1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Stock badge styling */
+.stock-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.stock-badge.low-stock {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Description cell styling */
+.description-cell {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action buttons styling */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-edit {
+  background: #dbeafe;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.btn-edit:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-delete {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  color: white;
+}
+
+/* Reusable Table Customizations */
+.rt-table__header {
+  background: #f7fafc !important;
+  padding: 16px 12px !important;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568 !important;
+  font-size: 14px;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rt-table__cell {
+  padding: 16px 12px !important;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.rt-table__row:hover {
+  background: #fafafa !important;
+}
+
+.rt-header {
+  display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products-content-with-header {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+  
+  .products-content-with-header.collapsed {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+  
+  .products-container {
+    padding: 20px;
+  }
+  
+  .products-controls-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .search-controls {
+    max-width: 100%;
+  }
+  
+  .action-controls {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-content-with-header {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .products-content-with-header.collapsed {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .products-main-content {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+  }
+  
+  .products-container {
+    padding: 15px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .table-section {
+    border-radius: 8px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 10px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+  
+  .search-input {
+    padding: 10px 40px 10px 12px;
+    font-size: 13px;
+  }
+  
+  .category-badge,
+  .stock-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  
+  .description-cell {
+    max-width: 120px;
+  }
+}

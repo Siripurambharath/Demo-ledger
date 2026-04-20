@@ -1,0 +1,1585 @@
+.retailers-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.retailers-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+.retailers-content-area.collapsed {
+  margin-left: 80px;
+}
+
+.retailers-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+  /* Toggle container */
+  .retailers-status-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Switch wrapper */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+
+  /* Hide checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* Slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+
+  /* Circle */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  /* ON state */
+  .switch input:checked + .slider {
+    background-color: #28a745;
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+
+  /* Text */
+  .status-text.active {
+    color: green;
+    font-weight: 600;
+  }
+
+  .status-text.inactive {
+    color: red;
+    font-weight: 600;
+  }
+/* Page Header - Replaces AdminHeader */
+.retailers-page-header {
+  background: #fff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.retailers-page-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.retailers-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.retailers-page-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #1f2937;
+}
+
+.retailers-welcome {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Content Section */
+.retailers-content-section {
+  flex: 1;
+  padding: 30px;
+  background-color: #f8fafc;
+}
+
+/* Header Top Section */
+.retailers-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.retailers-title-section {
+  flex: 1;
+}
+
+.retailers-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.retailers-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Add Retailer Button */
+.retailers-add-button--top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.retailers-add-button--top:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.retailers-add-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Search Box */
+/* .retailers-search-container {
+  max-width: 400px;
+  margin-bottom: 32px;
+}
+
+.retailers-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.retailers-search-icon {
+  position: absolute;
+  right: 12px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.retailers-search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px; 
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.retailers-search-input:focus {
+  outline: none;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+} */
+
+
+
+/* Add to your Retailers.css file */
+
+.retailers-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.retailers-role-dropdown,
+.retailers-add-button {
+  height: 42px;
+  min-width: 150px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.retailers-role-selector {
+  flex-shrink: 0;
+}
+
+.retailers-role-dropdown {
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.retailers-role-dropdown:hover {
+  border-color: #888;
+}
+
+.retailers-add-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.retailers-add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retailers-add-button--retailer {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.retailers-add-button--supplier {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.retailers-add-button--retailer:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.retailers-add-button--supplier:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.retailers-add-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Place Order Button */
+.retailers-table__order-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.retailers-table__order-btn:hover {
+  background-color: #218838;
+}
+
+/* Remove order button from actions if it was there */
+.retailers-table__action-btn--order {
+  display: none !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .retailers-buttons-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .retailers-add-buttons {
+    width: 100%;
+  }
+
+  .retailers-add-button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .retailers-role-selector {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .retailers-role-dropdown {
+    width: 100%;
+  }
+}
+
+/* Container centered & fixed width */
+.retailers-search-container {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: start;
+}
+
+/* Search Box */
+.retailers-search-box {
+  position: relative;
+  width: 100%;
+}
+
+/* Input field styling */
+.retailers-search-input {
+  width: 100%;
+  padding: 12px 45px 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  /* ✅ ensures padding doesn’t break width */
+}
+
+.retailers-search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.retailers-search-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Search icon positioning */
+.retailers-search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+
+
+
+
+
+
+
+
+
+
+/* Retailers List Section */
+.retailers-list-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.retailers-section-header {
+  padding: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.retailers-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+.retailers-section-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Table Container */
+.retailers-table-container {
+  padding: 0;
+}
+
+/* Keep all your existing table cell styles */
+.retailers-table__retailer-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.retailers-table__retailer-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.retailers-table__retailer-id {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.retailers-table__contact-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.retailers-table__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.retailers-table__contact-icon {
+  font-size: 12px;
+}
+
+.retailers-table__contact-email {
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: 20px;
+}
+
+.retailers-table__type-location-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.retailers-table__type {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.retailers-table__location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.retailers-table__location-icon {
+  font-size: 10px;
+}
+
+.retailers-table__performance-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.retailers-table__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.retailers-table__rating-icon {
+  font-size: 12px;
+}
+
+.retailers-table__revenue {
+  font-size: 12px;
+  color: #059669;
+  font-weight: 500;
+}
+
+.retailers-table__status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.retailers-table__status--active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.retailers-table__status--inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Action buttons styles */
+.retailers-table__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.retailers-table__action-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.retailers-table__action-btn--view:hover {
+  background-color: #e0f2fe;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
+}
+
+.retailers-table__action-btn--edit:hover {
+  background-color: #fef3c7;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+.retailers-table__action-btn--delete:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+}
+
+/* Loading, Error, and No Data States */
+.retailers-loading,
+.retailers-error,
+.retailers-no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 20px;
+  text-align: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.retailers-loading {
+  color: #2563eb;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+}
+
+.retailers-loading::before {
+  content: "⏳";
+  font-size: 24px;
+}
+
+.retailers-error {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.retailers-error::before {
+  content: "⚠️";
+  font-size: 24px;
+}
+
+.retailers-no-data {
+  color: #6b7280;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.retailers-no-data::before {
+  content: "📭";
+  font-size: 24px;
+}
+
+/* Status variants */
+.retailers-table__status--pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.retailers-table__status--suspended {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Bulk Upload Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  padding: 20px 30px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6c757d;
+  line-height: 1;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.modal-close-btn:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.modal-body {
+  padding: 30px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.upload-instructions {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.upload-instructions h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.upload-instructions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.upload-instructions li {
+  margin-bottom: 8px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.upload-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-template-download {
+  background-color: #1d6f42;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-template-download:hover {
+  background-color: #155d35;
+}
+
+.file-upload-area {
+  width: 100%;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #f8f9fa;
+  gap: 15px;
+}
+
+.file-upload-label:hover {
+  border-color: #1d6f42;
+  background-color: #f0f9f4;
+}
+
+.file-upload-label span {
+  color: #495057;
+  font-weight: 500;
+}
+
+.selected-file {
+  background-color: #e9ecef;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.preview-section h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.preview-table-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+}
+
+.preview-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.preview-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+}
+
+.preview-table th {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.preview-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.preview-row:hover {
+  background-color: #f8f9fa;
+}
+
+.preview-row.success td {
+  background-color: #d4edda;
+}
+
+.preview-row.error td {
+  background-color: #f8d7da;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.error-tooltip {
+  font-size: 0.8rem;
+  color: #dc3545;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.upload-progress {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #1d6f42;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.modal-footer {
+  padding: 20px 30px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-cancel,
+.btn-back,
+.btn-upload {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.btn-back {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.btn-back:hover:not(:disabled) {
+  background-color: #dde0e3;
+}
+
+.btn-upload {
+  background-color: #1d6f42;
+  color: white;
+}
+
+.btn-upload:hover:not(:disabled) {
+  background-color: #155d35;
+}
+
+.btn-cancel:disabled,
+.btn-back:disabled,
+.btn-upload:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Update existing button styles for bulk upload */
+.retailers-add-button--upload {
+  background-color: #1d6f42 !important;
+  color: white;
+}
+
+.retailers-add-button--upload:hover {
+  background-color: #155d35 !important;
+}
+
+.retailers-add-button--upload .retailers-add-icon {
+  margin-right: 8px;
+}
+
+
+/* Export Dropdown Styles */
+.retailers-export-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.retailers-export-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+  top: 100%;
+  left: 0;
+}
+
+.retailers-export-dropdown:hover .retailers-export-dropdown-content {
+  display: block;
+}
+
+.retailers-export-dropdown-content button {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.retailers-export-dropdown-content button:hover {
+  background-color: #f5f5f5;
+}
+
+.retailers-export-dropdown-content button:first-child {
+  border-bottom: 1px solid #eee;
+}
+
+.retailers-add-button--export {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.retailers-add-button--export:hover {
+  background-color: #218838 !important;
+  border-color: #1e7e34 !important;
+}
+
+/* Export button icon */
+.retailers-add-button--export .retailers-add-icon {
+  margin-right: 8px;
+}
+
+/* Action icons styles matching SalesItems */
+.retailers-table__action-icon {
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 0px;
+  padding: 0px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.retailers-table__action-icon--view {
+  color: #2563eb;
+}
+
+.retailers-table__action-icon--view:hover {
+  background-color: #dbeafe;
+  transform: scale(1.1);
+}
+
+.retailers-table__action-icon--edit {
+  color: #16a34a;
+}
+
+.retailers-table__action-icon--edit:hover {
+  background-color: #dcfce7;
+  transform: scale(1.1);
+}
+
+.retailers-table__action-icon--delete {
+  color: #dc2626;
+}
+
+.retailers-table__action-icon--delete:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+}
+
+/* Update the actions container if needed */
+.retailers-table__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Remove the old button styles if they exist */
+.retailers-table__action-btn {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .retailers-export-dropdown-content {
+    min-width: 200px;
+    left: -50px;
+  }
+
+  .retailers-add-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .retailers-export-dropdown,
+  .retailers-add-button--upload,
+  .retailers-add-button--retailer {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-container {
+    width: 95%;
+    margin: 10px;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 15px;
+  }
+
+  .preview-table-container {
+    font-size: 0.9rem;
+  }
+
+  .preview-table th,
+  .preview-table td {
+    padding: 8px 10px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .retailers-content-area {
+    margin-left: 80px !important;
+  }
+
+  .retailers-content-area.collapsed {
+    margin-left: 80px !important;
+  }
+
+  .retailers-content-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .retailers-content-area {
+    margin-left: 0 !important;
+  }
+
+  .retailers-content-area.collapsed {
+    margin-left: 0 !important;
+  }
+
+  .retailers-content-section {
+    padding: 16px;
+  }
+
+  .retailers-page-header {
+    padding: 12px 20px;
+  }
+
+  .retailers-page-title {
+    font-size: 18px;
+  }
+
+  .retailers-welcome {
+    font-size: 13px;
+  }
+
+  .retailers-main-title {
+    font-size: 24px;
+  }
+
+  .retailers-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .retailers-add-button--top {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .retailers-section-header {
+    padding: 20px;
+  }
+
+  .retailers-section-title {
+    font-size: 18px;
+  }
+
+  /* Mobile responsive actions */
+  .retailers-table__actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .retailers-table__action-btn {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retailers-content-section {
+    padding: 12px;
+  }
+
+  .retailers-main-title {
+    font-size: 20px;
+  }
+
+  .retailers-section-header {
+    padding: 16px;
+  }
+
+  .retailers-section-title {
+    font-size: 16px;
+  }
+
+  .retailers-table__actions {
+    gap: 2px;
+  }
+
+  .retailers-table__action-btn {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .retailers-loading,
+  .retailers-error,
+  .retailers-no-data {
+    height: 150px;
+    font-size: 14px;
+    margin: 16px;
+    padding: 20px;
+  }
+}
+
+/* Animation for smooth transitions */
+.retailers-table__action-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.retailers-add-button--top {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.retailers-table__action-btn:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.retailers-add-button--top:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Hover effects for table rows */
+.rt-table__row:hover .retailers-table__action-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Initially hide action buttons on desktop for cleaner look */
+@media (min-width: 769px) {
+  .rt-table__row .retailers-table__action-btn {
+    opacity: 0.7;
+  }
+
+  .rt-table__row:hover .retailers-table__action-btn {
+    opacity: 1;
+  }
+}
+
+
+
+/* Add these to your existing Retailers.css */
+
+/* Search and Add button container */
+.retailers-search-add-container {
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .retailers-search-add-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .retailers-search-container {
+    max-width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  .retailers-add-button--top {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .retailers-search-add-container {
+    gap: 12px;
+  }
+
+  .retailers-search-container {
+    max-width: 300px;
+  }
+}
+
+/* Ensure proper sidebar behavior on mobile */
+@media (max-width: 768px) {
+  .retailers-content-area {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .retailers-content-area.collapsed {
+    margin-left: 0 !important;
+  }
+}
+
+/* Ensure proper sidebar behavior on tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .retailers-content-area {
+    margin-left: 80px !important;
+  }
+
+  .retailers-content-area.collapsed {
+    margin-left: 80px !important;
+  }
+}
+
+/* Fix for mobile overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Loading and error states alignment */
+.loading-spinner,
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.retry-button {
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.retry-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Add these styles to your existing Retailers.css */
+
+/* Table responsive styles */
+.retailers-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure table maintains proper width on mobile */
+.retailers-table-container table {
+  min-width: 800px;
+  /* Minimum width to maintain table structure */
+  width: 100%;
+}
+
+/* Mobile-specific table improvements */
+@media (max-width: 768px) {
+  .retailers-table-container {
+    border-radius: 8px;
+    margin: 0 -16px;
+    width: calc(100% + 32px);
+  }
+
+  .retailers-table-container table {
+    min-width: 900px;
+    /* Slightly larger min-width for better mobile readability */
+    margin-bottom: 0;
+  }
+
+  /* Improve table cell spacing for mobile */
+  .retailers-table__retailer-cell,
+  .retailers-table__contact-cell,
+  .retailers-table__type-location-cell,
+  .retailers-table__performance-cell {
+    min-width: 120px;
+  }
+
+  /* Adjust font sizes for better mobile readability */
+  .retailers-table__retailer-name {
+    font-size: 14px;
+  }
+
+  .retailers-table__retailer-id {
+    font-size: 11px;
+  }
+
+  .retailers-table__contact-item,
+  .retailers-table__type,
+  .retailers-table__rating {
+    font-size: 13px;
+  }
+
+  .retailers-table__contact-email,
+  .retailers-table__location,
+  .retailers-table__revenue {
+    font-size: 11px;
+  }
+
+  /* Adjust action buttons for mobile */
+  .retailers-table__actions {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .retailers-table__action-btn {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .retailers-table-container table {
+    min-width: 850px;
+  }
+
+  .retailers-table-container {
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .retailers-table-container {
+    margin: 0 -12px;
+    width: calc(100% + 24px);
+  }
+
+  .retailers-table-container table {
+    min-width: 950px;
+    /* Even larger for very small screens */
+  }
+
+  /* Further reduce font sizes for very small screens */
+  .retailers-table__retailer-name {
+    font-size: 13px;
+  }
+
+  .retailers-table__contact-item,
+  .retailers-table__type,
+  .retailers-table__rating {
+    font-size: 12px;
+  }
+}
+
+/* Ensure the table header stays visible during horizontal scroll */
+.rt-table thead {
+  position: sticky;
+  top: 0;
+  background: #f8fafc;
+  z-index: 10;
+}
+
+/* Add visual indicator for horizontal scrolling */
+.retailers-table-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.retailers-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.retailers-table-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.retailers-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Improve table row hover effects for better UX */
+.rt-table__row:hover {
+  background-color: #f8fafc;
+}
+
+/* Ensure table cells have proper padding */
+.rt-table th,
+.rt-table td {
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+
+/* Add border between rows for better readability */
+.rt-table__row {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.rt-table__row:last-child {
+  border-bottom: none;
+}
+
+/* Status badge improvements for mobile */
+.retailers-table__status {
+  font-size: 11px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+/* Group type cell improvements */
+.retailers-table__group-type-cell {
+  min-width: 80px;
+}
+
+.retailers-table__group-type {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Display name cell improvements */
+.rt-table td:nth-child(4) {
+  /* Display Name column */
+  min-width: 100px;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* Performance cell number formatting */
+.retailers-table__revenue {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}

@@ -1,0 +1,366 @@
+/* Companies.css */
+.companies-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.companies-content-area {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.companies-content-area.collapsed {
+  margin-left: 80px;
+}
+
+.companies-main-content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+.companies-content-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.companies-header-top {
+  margin-bottom: 24px;
+}
+
+.companies-title-section h1.companies-main-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.companies-title-section .companies-subtitle {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.companies-search-add-container {
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.companies-search-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.companies-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.companies-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 44px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.companies-search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.companies-search-icon {
+  position: absolute;
+  left: 16px;
+  color: #a0aec0;
+}
+
+.companies-add-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.companies-add-button:hover {
+  background: linear-gradient(135deg, #3182ce, #2b6cb0);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.companies-add-icon {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.companies-list-section {
+  margin-top: 24px;
+}
+
+.companies-section-header {
+  margin-bottom: 20px;
+}
+
+.companies-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.companies-section-description {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.companies-table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+/* Table specific styles */
+.companies-table__company-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.companies-table__company-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.companies-table__company-id {
+  font-size: 12px;
+  color: #718096;
+}
+
+.companies-table__contact-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.companies-table__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #2d3748;
+}
+
+.companies-table__contact-email {
+  font-size: 12px;
+  color: #718096;
+}
+
+.companies-table__contact-icon,
+.companies-table__location-icon,
+.companies-table__employees-icon {
+  font-size: 12px;
+}
+
+.companies-table__industry-location-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.companies-table__industry {
+  font-size: 13px;
+  color: #2d3748;
+}
+
+.companies-table__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #718096;
+}
+
+.companies-table__performance-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.companies-table__employees {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #2d3748;
+}
+
+.companies-table__revenue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #38a169;
+}
+
+.companies-table__details-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.companies-table__entity-type {
+  font-size: 13px;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.companies-table__founded {
+  font-size: 12px;
+  color: #718096;
+}
+
+.companies-table__status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.companies-table__status--active {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.companies-table__status--inactive {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.companies-table__status--pending {
+  background-color: #fefcbf;
+  color: #d69e2e;
+}
+
+.companies-table__actions {
+  display: flex;
+  gap: 8px;
+  /* justify-content: center; */
+}
+
+.companies-table__action-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companies-table__action-btn--view {
+  background-color: #e6fffa;
+  color: #234e52;
+}
+
+.companies-table__action-btn--edit {
+  background-color: #ebf8ff;
+  color: #2a4365;
+}
+
+.companies-table__action-btn--delete {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.companies-table__action-btn:hover {
+  transform: scale(1.1);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 16px;
+  color: #718096;
+}
+
+.error-message {
+  text-align: center;
+  padding: 40px;
+  color: #e53e3e;
+}
+
+.retry-button {
+  padding: 10px 20px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.retry-button:hover {
+  background-color: #3182ce;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .companies-content-area {
+    margin-left: 0;
+  }
+  
+  .companies-content-area.collapsed {
+    margin-left: 0;
+  }
+  
+  .companies-search-add-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .companies-search-container {
+    max-width: none;
+  }
+  
+  .companies-add-button {
+    justify-content: center;
+  }
+  
+  .companies-table__actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.companies-table__discount-tag {
+  background: #28a745;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+

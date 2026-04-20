@@ -1,0 +1,304 @@
+.retailer-orders {
+  padding: 16px;
+  background: #f5f5f5;
+  min-height: 100vh;
+  margin-top: 40px;
+}
+
+/* Header */
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 8px;
+}
+
+.orders-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.add-order-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-order-btn:active {
+  background: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-message p {
+  margin: 0;
+  color: #c00;
+  font-size: 14px;
+  flex: 1;
+}
+
+.retry-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+/* No Orders State */
+.no-orders {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.no-orders-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.no-orders h3 {
+  color: #666;
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.no-orders p {
+  color: #888;
+  margin: 0 0 20px 0;
+  font-size: 14px;
+}
+
+.create-order-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create-order-btn:active {
+  background: #218838;
+}
+
+/* Orders List */
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Order Item */
+.order-item {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  flex: 1;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.processing {
+  background: #cce7ff;
+  color: #004085;
+}
+
+/* Order Category */
+.order-category {
+  margin-bottom: 12px;
+}
+
+.order-category span {
+  background: #f8f9fa;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Order Details */
+.order-details {
+  margin-bottom: 16px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail:last-child {
+  border-bottom: none;
+}
+
+.total-price {
+  font-weight: 700;
+  color: #007bff;
+}
+
+.order-id {
+  font-family: monospace;
+  background: #f8f9fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Order Actions */
+.order-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-btn {
+  flex: 1;
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-btn:active {
+  background: #c82333;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .retailer-orders {
+    padding: 12px;
+  }
+  
+  .orders-header {
+    padding: 0 4px;
+  }
+  
+  .orders-header h1 {
+    font-size: 20px;
+  }
+  
+  .add-order-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  
+  .order-item {
+    padding: 12px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+  }
+}
+
+
+
+/* Add to existing RetailerOrders.css */
+
+.order-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.edit-btn {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-btn:active {
+  background: #e0a800;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-btn:active {
+  background: #c82333;
+}

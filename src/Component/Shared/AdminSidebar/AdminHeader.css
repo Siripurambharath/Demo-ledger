@@ -1,0 +1,125 @@
+/* AdminHeader.css */
+.admin-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 990;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+.admin-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-toggle-btn {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.header-toggle-btn:hover {
+  background: #1d4ed8;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcome-text {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-header {
+    height: 70px;
+  }
+  
+  .admin-header-content {
+    padding: 0 20px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+  
+  .welcome-text {
+    font-size: 13px;
+  }
+  
+  .header-toggle-btn {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    height: 60px;
+  }
+  
+  .admin-header-content {
+    padding: 0 16px;
+  }
+  
+  .page-title {
+    font-size: 18px;
+  }
+  
+  .welcome-text {
+    font-size: 12px;
+  }
+  
+  .header-left {
+    gap: 12px;
+  }
+  
+  .header-toggle-btn {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header-content {
+    padding: 0 12px;
+  }
+  
+  .page-title {
+    font-size: 16px;
+  }
+  
+  .welcome-text {
+    display: none; /* Hide welcome text on very small screens */
+  }
+}

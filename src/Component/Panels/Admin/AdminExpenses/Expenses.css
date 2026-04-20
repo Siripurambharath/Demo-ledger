@@ -1,0 +1,372 @@
+.expenses-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.expenses-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+.expenses-content-area.collapsed {
+  margin-left: 80px;
+}
+
+.expenses-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header - Replaces AdminHeader */
+.expenses-page-header {
+  background: #fff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.expenses-page-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expenses-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expenses-page-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #1f2937;
+}
+
+.expenses-welcome {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Content Section */
+.expenses-content-section {
+  flex: 1;
+  padding: 30px;
+  background-color: #f8fafc;
+}
+
+/* Header Top Section */
+.expenses-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.expenses-title-section {
+  flex: 1;
+}
+
+.expenses-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.expenses-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Add Retailer Button */
+.expenses-add-button--top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.expenses-add-button--top:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.expenses-add-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Search Box */
+.expenses-search-container {
+  max-width: 400px;
+  margin-bottom: 32px;
+}
+
+.expenses-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.expenses-search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.expenses-search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.expenses-search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Retailers List Section */
+.expenses-list-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.expenses-section-header {
+  padding: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.expenses-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+}
+
+.expenses-section-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Table Container */
+.expenses-table-container {
+  padding: 0;
+}
+
+/* Keep all your existing table cell styles */
+.expenses-table__retailer-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expenses-table__retailer-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.expenses-table__retailer-id {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.expenses-table__contact-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expenses-table__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.expenses-table__contact-icon {
+  font-size: 12px;
+}
+
+.expenses-table__contact-email {
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: 20px;
+}
+
+.expenses-table__type-location-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expenses-table__type {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.expenses-table__location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.expenses-table__location-icon {
+  font-size: 10px;
+}
+
+.expenses-table__performance-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expenses-table__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.expenses-table__rating-icon {
+  font-size: 12px;
+}
+
+.expenses-table__revenue {
+  font-size: 12px;
+  color: #059669;
+  font-weight: 500;
+}
+
+.expenses-table__status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.expenses-table__status--active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .expenses-content-area {
+    margin-left: 80px !important;
+  }
+  
+  .expenses-content-area.collapsed {
+    margin-left: 80px !important;
+  }
+  
+  .expenses-content-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expenses-content-area {
+    margin-left: 0 !important;
+  }
+  
+  .expenses-content-area.collapsed {
+    margin-left: 0 !important;
+  }
+  
+  .expenses-content-section {
+    padding: 16px;
+  }
+  
+  .expenses-page-header {
+    padding: 12px 20px;
+  }
+  
+  .expenses-page-title {
+    font-size: 18px;
+  }
+  
+  .expenses-welcome {
+    font-size: 13px;
+  }
+  
+  .expenses-main-title {
+    font-size: 24px;
+  }
+  
+  .expenses-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .expenses-add-button--top {
+    align-self: stretch;
+    justify-content: center;
+  }
+  
+  .expenses-section-header {
+    padding: 20px;
+  }
+  
+  .expenses-section-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expenses-content-section {
+    padding: 12px;
+  }
+  
+  .expenses-main-title {
+    font-size: 20px;
+  }
+  
+  .expenses-section-header {
+    padding: 16px;
+  }
+  
+  .expenses-section-title {
+    font-size: 16px;
+  }
+}

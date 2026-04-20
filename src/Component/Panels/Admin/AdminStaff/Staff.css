@@ -1,0 +1,421 @@
+.staff-page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Main content wrapper */
+.staff-content-with-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 250px);
+}
+
+.staff-content-with-header.collapsed {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+}
+
+.staff-main-content {
+  flex: 1;
+  padding: 0;
+  background: #f8f9fa;
+  min-height: calc(100vh - 70px);
+  /* margin-top: 70px; */
+  width: 100%;
+}
+
+.staff-container {
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Page Header Section */
+.page-header-section {
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #718096;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Controls Section */
+.staff-controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-controls {
+  flex: 1;
+  max-width: 400px;
+}
+
+.action-controls {
+  flex-shrink: 0;
+}
+
+/* Search Box */
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 45px 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+
+/* Add Staff Button */
+.add-staff-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.add-staff-btn:hover {
+  background: #3182ce;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+/* Table Section */
+.table-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Custom styles for ReusableTable integration */
+.rt-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rt-table__header {
+  background: #f7fafc !important;
+  padding: 16px 12px !important;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568 !important;
+  font-size: 14px;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rt-table__cell {
+  padding: 16px 12px !important;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.rt-table__row:hover {
+  background: #fafafa !important;
+}
+
+.rt-table__row:last-child .rt-table__cell {
+  border-bottom: none;
+}
+
+/* Staff Info Styles */
+.staff-name {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.staff-email {
+  color: #718096;
+  font-size: 14px;
+}
+
+.staff-mobile {
+  color: #4a5568;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+/* Badge Styles */
+.role-badge {
+  background: #ebf8ff;
+  color: #3182ce;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.status-active {
+  background: #f0fff4;
+  color: #38a169;
+  border: 1px solid #c6f6d5;
+}
+
+.status-inactive {
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7;
+}
+
+.last-login {
+  color: #718096;
+  font-size: 13px;
+}
+
+/* ========================= */
+/* Action Icons Styling      */
+/* ========================= */
+
+.action-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* consistent spacing */
+}
+
+.icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: #f9fafb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* View Button */
+.view-btn {
+  color: #3182ce;
+  background: #ebf8ff;
+  border: 1px solid #bee3f8;
+}
+
+.view-btn:hover {
+  background: #bee3f8;
+  color: #2b6cb0;
+}
+
+/* Edit Button */
+.edit-btn {
+  color: #38a169;
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+}
+
+.edit-btn:hover {
+  background: #c6f6d5;
+  color: #2f855a;
+}
+
+/* Delete Button */
+.delete-btn {
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+}
+
+.delete-btn:hover {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+/* ========================= */
+/* Responsive Adjustments    */
+/* ========================= */
+@media (max-width: 768px) {
+  .action-icons {
+    gap: 6px;
+  }
+
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icon-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-icons {
+    gap: 4px;
+  }
+
+  .icon-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .icon-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+
+
+
+.staff-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.staff-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+}
+
+.staff-action-btn:hover {
+  transform: scale(1.1);
+}
+
+.staff-view-btn {
+  color: #1890ff;
+}
+
+.staff-view-btn:hover {
+  background-color: #e6f7ff;
+}
+
+.staff-edit-btn {
+  color: #52c41a;
+}
+
+.staff-edit-btn:hover {
+  background-color: #f6ffed;
+}
+
+.staff-delete-btn {
+  color: #ff4d4f;
+}
+
+.staff-delete-btn:hover {
+  background-color: #fff2f0;
+}
+
+/* If you need to ensure proper icon alignment */
+.staff-action-btn svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* For the LAST LOGIN section */
+.last-login-section {
+  color: #999;
+  font-style: italic;
+}
+
+.staff-actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* If you want the actions to be more compact */
+.compact-actions .staff-action-btn {
+  width: 28px;
+  height: 28px;
+}
+
+.compact-actions .staff-action-btn svg {
+  size: 14px;
+}

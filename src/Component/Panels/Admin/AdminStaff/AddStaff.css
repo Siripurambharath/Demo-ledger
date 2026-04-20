@@ -1,0 +1,579 @@
+/* ============================================
+   ADD STAFF PAGE STYLES - ADMIN STAFF
+   ============================================ */
+
+/* Wrapper and Layout */
+.admin-staff-page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.admin-staff-main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.admin-staff-main-content.collapsed {
+  margin-left: 80px;
+}
+
+.admin-staff-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page Title */
+.admin-staff-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3f51b5;
+  display: inline-block;
+  padding-right: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* Form Styles */
+.admin-staff-form {
+  width: 100%;
+}
+
+/* ============ TAB-BASED STYLES ============ */
+
+/* Tab Navigation */
+.admin-staff-tabs {
+  display: flex;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #dee2e6;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  background: white;
+  border-radius: 8px 8px 0 0;
+  padding-top: 1rem;
+}
+
+.admin-staff-tab {
+  padding: 0.75rem 1.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  font-weight: 500;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  top: 1px;
+  font-size: 0.95rem;
+}
+
+.admin-staff-tab:hover {
+  background-color: #e9ecef;
+  color: #3498db;
+}
+
+.admin-staff-tab.active {
+  background-color: white;
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  margin-bottom: -1px;
+  z-index: 1;
+  font-weight: 600;
+}
+
+/* Form Card */
+.admin-staff-form-card {
+  display: none;
+  background: white;
+  border-radius: 0 8px 8px 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.3s ease-in-out;
+  border-top: none;
+}
+
+.admin-staff-form-card.active-section {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Title */
+.admin-staff-section-title {
+  color: #3498db;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.75rem;
+}
+
+/* Form Grid */
+.admin-staff-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.admin-staff-form-field {
+  margin-bottom: 0;
+}
+
+.admin-staff-full-width {
+  grid-column: span 2;
+}
+
+/* Form Labels and Inputs */
+.admin-staff-form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.admin-staff-form-input {
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.admin-staff-form-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+  outline: none;
+}
+
+.admin-staff-form-input:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+textarea.admin-staff-form-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Checkbox Styles */
+.admin-staff-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #495057;
+  padding: 8px 0;
+}
+
+.admin-staff-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.admin-staff-checkbox-text {
+  user-select: none;
+  line-height: 1.4;
+}
+
+/* Password Wrapper */
+.admin-staff-password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.admin-staff-password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.admin-staff-password-toggle:hover {
+  color: #3498db;
+  background-color: #f8f9fa;
+}
+
+/* Opening Balance Group - Percentage Width Version */
+.admin-staff-opening-balance-group {
+  display: flex;
+  width: 100%;
+  gap: 0;
+}
+
+.admin-staff-opening-balance-group input {
+  width: 60%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.admin-staff-opening-balance-group select {
+  width: 40%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* Same as Shipping Section */
+.admin-staff-same-as-shipping {
+  margin-bottom: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Form Actions */
+.admin-staff-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.admin-staff-left-actions,
+.admin-staff-right-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styles */
+.admin-staff-cancel-btn,
+.admin-staff-back-btn,
+.admin-staff-next-btn,
+.admin-staff-submit-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.admin-staff-cancel-btn {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.admin-staff-cancel-btn:hover:not(:disabled) {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.admin-staff-back-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.admin-staff-back-btn:hover:not(:disabled) {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-staff-next-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.admin-staff-next-btn:hover:not(:disabled) {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.admin-staff-submit-btn {
+  background-color: #28a745;
+  color: white;
+  min-width: 140px;
+}
+
+.admin-staff-submit-btn:hover:not(:disabled) {
+  background-color: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+button:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Error Message */
+.admin-staff-error-message {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Loading Container */
+.admin-staff-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  min-height: 300px;
+}
+
+.admin-staff-loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.admin-staff-loading-container p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+@media (max-width: 1024px) {
+  .admin-staff-main-content {
+    margin-left: 80px;
+    padding: 15px;
+  }
+  
+  .admin-staff-main-content.collapsed {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-staff-main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .admin-staff-main-content.collapsed {
+    margin-left: 0;
+  }
+  
+  .admin-staff-container {
+    padding: 0;
+  }
+  
+  .admin-staff-form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .admin-staff-full-width {
+    grid-column: span 1;
+  }
+  
+  .admin-staff-tabs {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .admin-staff-tab {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .admin-staff-form-card {
+    padding: 1.5rem;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .admin-staff-form-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .admin-staff-left-actions,
+  .admin-staff-right-actions {
+    width: 100%;
+  }
+  
+  .admin-staff-right-actions {
+    justify-content: space-between;
+  }
+  
+  .admin-staff-cancel-btn,
+  .admin-staff-back-btn,
+  .admin-staff-next-btn,
+  .admin-staff-submit-btn {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+  
+  .admin-staff-section-title {
+    font-size: 1.1rem;
+  }
+  
+  .admin-staff-opening-balance-group {
+    flex-direction: column;
+  }
+  
+  .admin-staff-opening-balance-group .admin-staff-form-input:last-child {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-staff-page-title {
+    font-size: 1.5rem;
+  }
+  
+  .admin-staff-tabs {
+    flex-direction: column;
+    border-bottom: none;
+    gap: 0.25rem;
+  }
+  
+  .admin-staff-tab {
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 0.25rem;
+    text-align: left;
+    padding: 0.75rem 1rem;
+  }
+  
+  .admin-staff-tab.active {
+    border-bottom: 1px solid #dee2e6;
+    border-bottom: 2px solid #3498db;
+    background-color: #f0f7ff;
+  }
+  
+  .admin-staff-form-card {
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .admin-staff-right-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .admin-staff-cancel-btn,
+  .admin-staff-back-btn,
+  .admin-staff-next-btn,
+  .admin-staff-submit-btn {
+    width: 100%;
+  }
+  
+  .admin-staff-left-actions {
+    width: 100%;
+  }
+  
+  .admin-staff-section-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  
+  .admin-staff-form-label {
+    font-size: 0.9rem;
+  }
+  
+  .admin-staff-form-input {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Opening Balance Group */
+.admin-staff-opening-balance-group {
+  display: flex;
+}
+
+.admin-staff-opening-balance-group .admin-staff-form-input:first-child {
+  flex: 2;
+}
+
+.admin-staff-opening-balance-group .admin-staff-form-input:last-child {
+  flex: 1;
+}
